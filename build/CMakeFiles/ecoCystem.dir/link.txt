@@ -1,0 +1,1 @@
+/bin/c++  -g -g   CMakeFiles/ecoCystem.dir/src/graphics.cpp.o CMakeFiles/ecoCystem.dir/src/main.cpp.o CMakeFiles/ecoCystem.dir/src/state.cpp.o CMakeFiles/ecoCystem.dir/3rd/glad/src/glad.c.o  -o ecoCystem   -L/usr/lib/gcc-cross/aarch64-linux-gnu/9  -L/usr/aarch64-linux-gnu/lib  -L/lib/aarch64-linux-gnu  -L/usr/lib/aarch64-linux-gnu  -ldl -lglfw 
