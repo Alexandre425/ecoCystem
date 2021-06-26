@@ -6,3 +6,33 @@
 
 #IncludeRegexTransform: 
 
+../3rd/glad/include/KHR/khrplatform.h
+stdint.h
+-
+inttypes.h
+-
+stdint.h
+-
+
+../3rd/glad/include/glad/glad.h
+KHR/khrplatform.h
+-
+
+/home/alexandre/ecoCystem/src/graphics.cpp
+iostream
+-
+fstream
+-
+streambuf
+-
+graphics.hpp
+/home/alexandre/ecoCystem/src/graphics.hpp
+
+/home/alexandre/ecoCystem/src/graphics.hpp
+string
+-
+glad/glad.h
+-
+GLFW/glfw3.h
+-
+

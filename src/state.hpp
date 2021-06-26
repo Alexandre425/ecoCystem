@@ -9,6 +9,10 @@ class State
         Graphics graphics;
 
         void mainLoop();
+        // Initializes all the systems, run before entering the main loop
+        void init();
+        // Frees all the system resources
+        void terminate();
     private:
 
 };

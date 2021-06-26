@@ -123,32 +123,32 @@ ecoCystem/fast:
 	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/build
 .PHONY : ecoCystem/fast
 
-3rd/glad/src/glad.o: 3rd/glad/src/glad.c.o
+3rd/glad/src/glad.o: 3rd/glad/src/glad.cpp.o
 
 .PHONY : 3rd/glad/src/glad.o
 
 # target to build an object file
-3rd/glad/src/glad.c.o:
-	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/glad/src/glad.c.o
-.PHONY : 3rd/glad/src/glad.c.o
+3rd/glad/src/glad.cpp.o:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/glad/src/glad.cpp.o
+.PHONY : 3rd/glad/src/glad.cpp.o
 
-3rd/glad/src/glad.i: 3rd/glad/src/glad.c.i
+3rd/glad/src/glad.i: 3rd/glad/src/glad.cpp.i
 
 .PHONY : 3rd/glad/src/glad.i
 
 # target to preprocess a source file
-3rd/glad/src/glad.c.i:
-	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/glad/src/glad.c.i
-.PHONY : 3rd/glad/src/glad.c.i
+3rd/glad/src/glad.cpp.i:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/glad/src/glad.cpp.i
+.PHONY : 3rd/glad/src/glad.cpp.i
 
-3rd/glad/src/glad.s: 3rd/glad/src/glad.c.s
+3rd/glad/src/glad.s: 3rd/glad/src/glad.cpp.s
 
 .PHONY : 3rd/glad/src/glad.s
 
 # target to generate assembly for a file
-3rd/glad/src/glad.c.s:
-	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/glad/src/glad.c.s
-.PHONY : 3rd/glad/src/glad.c.s
+3rd/glad/src/glad.cpp.s:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/glad/src/glad.cpp.s
+.PHONY : 3rd/glad/src/glad.cpp.s
 
 src/graphics.o: src/graphics.cpp.o
 

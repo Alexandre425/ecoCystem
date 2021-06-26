@@ -1,22 +1,22 @@
 [
 {
   "directory": "/home/alexandre/ecoCystem/build",
-  "command": "/bin/c++   -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include  -g -g   -std=gnu++17 -o CMakeFiles/ecoCystem.dir/src/graphics.cpp.o -c /home/alexandre/ecoCystem/src/graphics.cpp",
+  "command": "/bin/c++   -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include  -g   -std=gnu++17 -o CMakeFiles/ecoCystem.dir/src/graphics.cpp.o -c /home/alexandre/ecoCystem/src/graphics.cpp",
   "file": "/home/alexandre/ecoCystem/src/graphics.cpp"
 },
 {
   "directory": "/home/alexandre/ecoCystem/build",
-  "command": "/bin/c++   -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include  -g -g   -std=gnu++17 -o CMakeFiles/ecoCystem.dir/src/main.cpp.o -c /home/alexandre/ecoCystem/src/main.cpp",
+  "command": "/bin/c++   -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include  -g   -std=gnu++17 -o CMakeFiles/ecoCystem.dir/src/main.cpp.o -c /home/alexandre/ecoCystem/src/main.cpp",
   "file": "/home/alexandre/ecoCystem/src/main.cpp"
 },
 {
   "directory": "/home/alexandre/ecoCystem/build",
-  "command": "/bin/c++   -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include  -g -g   -std=gnu++17 -o CMakeFiles/ecoCystem.dir/src/state.cpp.o -c /home/alexandre/ecoCystem/src/state.cpp",
+  "command": "/bin/c++   -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include  -g   -std=gnu++17 -o CMakeFiles/ecoCystem.dir/src/state.cpp.o -c /home/alexandre/ecoCystem/src/state.cpp",
   "file": "/home/alexandre/ecoCystem/src/state.cpp"
 },
 {
   "directory": "/home/alexandre/ecoCystem/build",
-  "command": "/bin/aarch64-linux-gnu-gcc-9  -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include  -g   -o CMakeFiles/ecoCystem.dir/3rd/glad/src/glad.c.o   -c /home/alexandre/ecoCystem/3rd/glad/src/glad.c",
-  "file": "/home/alexandre/ecoCystem/3rd/glad/src/glad.c"
+  "command": "/bin/c++   -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include  -g   -std=gnu++17 -o CMakeFiles/ecoCystem.dir/3rd/glad/src/glad.cpp.o -c /home/alexandre/ecoCystem/3rd/glad/src/glad.cpp",
+  "file": "/home/alexandre/ecoCystem/3rd/glad/src/glad.cpp"
 }
 ]

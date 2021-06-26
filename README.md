@@ -61,6 +61,8 @@ A few ideas for how the creatures are to be implemented.
   * Move with its herd
   * Defend a member of the herd
   * Defend a carcass from a competing carnivore
+  * Climb a tall plant for safety
+  * Fly
 #### Feeding and energy
 * There are 3 energy pools
   * Eaten food goes to the stomach, where it gets converted to stamina through digestion.

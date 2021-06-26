@@ -7,9 +7,9 @@ State state;
 
 int main (void)
 {
-    state.graphics.initialize();
-
+    state.init();
     state.mainLoop();
+    state.terminate();
 
     return 0;
 }
