@@ -9,8 +9,9 @@ A life, evolution and ecosystem simulator written in C++
 - [ ] Basic herbivore creatures
 - [ ] Creature reproduction
 - [ ] Creature traits
-- [ ] Space partitioning (quadtree or grid)
 - [ ] Decision system assigning scores to each of a creature's needs
+- [ ] Space partitioning (quadtree or grid)
+- [ ] Noise-function based soil richness (affecting resource abundance)
 - [ ] Saving and loading the simulation state (possibly through JSON)
 - [ ] Semi-permanent plants with leaf/fruit regeneration and reproduction
 - [ ] Complex creatures with biomass, growth, digestion
