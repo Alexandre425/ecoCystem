@@ -14,11 +14,11 @@ CMakeFiles/ecoCystem.dir/src/main.cpp.o: ../3rd/glad/include/KHR/khrplatform.h
 CMakeFiles/ecoCystem.dir/src/main.cpp.o: ../3rd/glad/include/glad/glad.h
 CMakeFiles/ecoCystem.dir/src/main.cpp.o: ../src/graphics.hpp
 CMakeFiles/ecoCystem.dir/src/main.cpp.o: ../src/main.cpp
-CMakeFiles/ecoCystem.dir/src/main.cpp.o: ../src/state.hpp
+CMakeFiles/ecoCystem.dir/src/main.cpp.o: ../src/world.hpp
 
-CMakeFiles/ecoCystem.dir/src/state.cpp.o: ../3rd/glad/include/KHR/khrplatform.h
-CMakeFiles/ecoCystem.dir/src/state.cpp.o: ../3rd/glad/include/glad/glad.h
-CMakeFiles/ecoCystem.dir/src/state.cpp.o: ../src/graphics.hpp
-CMakeFiles/ecoCystem.dir/src/state.cpp.o: ../src/state.cpp
-CMakeFiles/ecoCystem.dir/src/state.cpp.o: ../src/state.hpp
+CMakeFiles/ecoCystem.dir/src/world.cpp.o: ../3rd/glad/include/KHR/khrplatform.h
+CMakeFiles/ecoCystem.dir/src/world.cpp.o: ../3rd/glad/include/glad/glad.h
+CMakeFiles/ecoCystem.dir/src/world.cpp.o: ../src/graphics.hpp
+CMakeFiles/ecoCystem.dir/src/world.cpp.o: ../src/world.cpp
+CMakeFiles/ecoCystem.dir/src/world.cpp.o: ../src/world.hpp
 

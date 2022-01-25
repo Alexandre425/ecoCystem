@@ -11,9 +11,9 @@ class Graphics
         GLFWwindow* window;
 
         // Initializes glfw and glad
-        void init();
+        Graphics();
         // Frees all graphics related resources
-        void terminate();
+        ~Graphics();
         // Draws a test triangle in the middle of the screen
         void drawTestTriangle();
 

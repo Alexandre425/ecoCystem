@@ -83,18 +83,18 @@ CMakeFiles/ecoCystem.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ecoCystem.dir/src/main.cpp.s"
 	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexandre/ecoCystem/src/main.cpp -o CMakeFiles/ecoCystem.dir/src/main.cpp.s
 
-CMakeFiles/ecoCystem.dir/src/state.cpp.o: CMakeFiles/ecoCystem.dir/flags.make
-CMakeFiles/ecoCystem.dir/src/state.cpp.o: ../src/state.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alexandre/ecoCystem/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ecoCystem.dir/src/state.cpp.o"
-	/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ecoCystem.dir/src/state.cpp.o -c /home/alexandre/ecoCystem/src/state.cpp
+CMakeFiles/ecoCystem.dir/src/world.cpp.o: CMakeFiles/ecoCystem.dir/flags.make
+CMakeFiles/ecoCystem.dir/src/world.cpp.o: ../src/world.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alexandre/ecoCystem/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ecoCystem.dir/src/world.cpp.o"
+	/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ecoCystem.dir/src/world.cpp.o -c /home/alexandre/ecoCystem/src/world.cpp
 
-CMakeFiles/ecoCystem.dir/src/state.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ecoCystem.dir/src/state.cpp.i"
-	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alexandre/ecoCystem/src/state.cpp > CMakeFiles/ecoCystem.dir/src/state.cpp.i
+CMakeFiles/ecoCystem.dir/src/world.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ecoCystem.dir/src/world.cpp.i"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alexandre/ecoCystem/src/world.cpp > CMakeFiles/ecoCystem.dir/src/world.cpp.i
 
-CMakeFiles/ecoCystem.dir/src/state.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ecoCystem.dir/src/state.cpp.s"
-	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexandre/ecoCystem/src/state.cpp -o CMakeFiles/ecoCystem.dir/src/state.cpp.s
+CMakeFiles/ecoCystem.dir/src/world.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ecoCystem.dir/src/world.cpp.s"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexandre/ecoCystem/src/world.cpp -o CMakeFiles/ecoCystem.dir/src/world.cpp.s
 
 CMakeFiles/ecoCystem.dir/3rd/glad/src/glad.cpp.o: CMakeFiles/ecoCystem.dir/flags.make
 CMakeFiles/ecoCystem.dir/3rd/glad/src/glad.cpp.o: ../3rd/glad/src/glad.cpp
@@ -113,7 +113,7 @@ CMakeFiles/ecoCystem.dir/3rd/glad/src/glad.cpp.s: cmake_force
 ecoCystem_OBJECTS = \
 "CMakeFiles/ecoCystem.dir/src/graphics.cpp.o" \
 "CMakeFiles/ecoCystem.dir/src/main.cpp.o" \
-"CMakeFiles/ecoCystem.dir/src/state.cpp.o" \
+"CMakeFiles/ecoCystem.dir/src/world.cpp.o" \
 "CMakeFiles/ecoCystem.dir/3rd/glad/src/glad.cpp.o"
 
 # External object files for target ecoCystem
@@ -121,7 +121,7 @@ ecoCystem_EXTERNAL_OBJECTS =
 
 ecoCystem: CMakeFiles/ecoCystem.dir/src/graphics.cpp.o
 ecoCystem: CMakeFiles/ecoCystem.dir/src/main.cpp.o
-ecoCystem: CMakeFiles/ecoCystem.dir/src/state.cpp.o
+ecoCystem: CMakeFiles/ecoCystem.dir/src/world.cpp.o
 ecoCystem: CMakeFiles/ecoCystem.dir/3rd/glad/src/glad.cpp.o
 ecoCystem: CMakeFiles/ecoCystem.dir/build.make
 ecoCystem: CMakeFiles/ecoCystem.dir/link.txt

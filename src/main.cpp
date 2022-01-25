@@ -1,15 +1,14 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
-#include "state.hpp"
+#include "world.hpp"
 
-State state;
 
 int main (void)
 {
-    state.init();
-    state.mainLoop();
-    state.terminate();
+    World world;
+
+    world.mainLoop();
 
     return 0;
 }

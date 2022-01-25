@@ -11,8 +11,8 @@
 },
 {
   "directory": "/home/alexandre/ecoCystem/build",
-  "command": "/bin/c++   -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include  -g   -std=gnu++17 -o CMakeFiles/ecoCystem.dir/src/state.cpp.o -c /home/alexandre/ecoCystem/src/state.cpp",
-  "file": "/home/alexandre/ecoCystem/src/state.cpp"
+  "command": "/bin/c++   -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include  -g   -std=gnu++17 -o CMakeFiles/ecoCystem.dir/src/world.cpp.o -c /home/alexandre/ecoCystem/src/world.cpp",
+  "file": "/home/alexandre/ecoCystem/src/world.cpp"
 },
 {
   "directory": "/home/alexandre/ecoCystem/build",

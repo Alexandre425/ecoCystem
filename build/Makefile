@@ -204,32 +204,32 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/state.o: src/state.cpp.o
+src/world.o: src/world.cpp.o
 
-.PHONY : src/state.o
+.PHONY : src/world.o
 
 # target to build an object file
-src/state.cpp.o:
-	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/state.cpp.o
-.PHONY : src/state.cpp.o
+src/world.cpp.o:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/world.cpp.o
+.PHONY : src/world.cpp.o
 
-src/state.i: src/state.cpp.i
+src/world.i: src/world.cpp.i
 
-.PHONY : src/state.i
+.PHONY : src/world.i
 
 # target to preprocess a source file
-src/state.cpp.i:
-	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/state.cpp.i
-.PHONY : src/state.cpp.i
+src/world.cpp.i:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/world.cpp.i
+.PHONY : src/world.cpp.i
 
-src/state.s: src/state.cpp.s
+src/world.s: src/world.cpp.s
 
-.PHONY : src/state.s
+.PHONY : src/world.s
 
 # target to generate assembly for a file
-src/state.cpp.s:
-	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/state.cpp.s
-.PHONY : src/state.cpp.s
+src/world.cpp.s:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/world.cpp.s
+.PHONY : src/world.cpp.s
 
 # Help Target
 help:
@@ -249,9 +249,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/state.o"
-	@echo "... src/state.i"
-	@echo "... src/state.s"
+	@echo "... src/world.o"
+	@echo "... src/world.i"
+	@echo "... src/world.s"
 .PHONY : help
 
 

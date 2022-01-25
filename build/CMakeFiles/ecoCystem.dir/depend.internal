@@ -15,10 +15,10 @@ CMakeFiles/ecoCystem.dir/src/main.cpp.o
  ../3rd/glad/include/glad/glad.h
  /home/alexandre/ecoCystem/src/graphics.hpp
  /home/alexandre/ecoCystem/src/main.cpp
- /home/alexandre/ecoCystem/src/state.hpp
-CMakeFiles/ecoCystem.dir/src/state.cpp.o
+ /home/alexandre/ecoCystem/src/world.hpp
+CMakeFiles/ecoCystem.dir/src/world.cpp.o
  ../3rd/glad/include/KHR/khrplatform.h
  ../3rd/glad/include/glad/glad.h
  /home/alexandre/ecoCystem/src/graphics.hpp
- /home/alexandre/ecoCystem/src/state.cpp
- /home/alexandre/ecoCystem/src/state.hpp
+ /home/alexandre/ecoCystem/src/world.cpp
+ /home/alexandre/ecoCystem/src/world.hpp

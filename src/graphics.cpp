@@ -71,12 +71,12 @@ unsigned int createShaderProgram(const char* vs_path, const char* fs_path)
     return program;
 }
 
-void Graphics::init()
+Graphics::Graphics()
 {
     glfwInit();
     // Configure openGL with version 3.1 and only core functionality
     glfwInitHint(GLFW_VERSION_MAJOR, 3);
-    glfwInitHint(GLFW_VERSION_MINOR, 1);
+    glfwInitHint(GLFW_VERSION_MINOR, 3);
     glfwInitHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     window = glfwCreateWindow(800, 600, "ecoCystem", NULL, NULL);
@@ -93,11 +93,9 @@ void Graphics::init()
 
     // Create the necessary shader programs
     tri_shader = createShaderProgram("res/shaders/triangle.vs", "res/shaders/triangle.fs");
-
-
 }
 
-void Graphics::terminate()
+Graphics::~Graphics()
 {
     glfwTerminate();
 }
