@@ -18,6 +18,16 @@ stdint.h
 KHR/khrplatform.h
 -
 
+/home/alexandre/ecoCystem/src/graphics.cpp
+iostream
+-
+fstream
+-
+streambuf
+-
+graphics.hpp
+/home/alexandre/ecoCystem/src/graphics.hpp
+
 /home/alexandre/ecoCystem/src/graphics.hpp
 string
 -
@@ -26,10 +36,10 @@ glad/glad.h
 GLFW/glfw3.h
 -
 
-/home/alexandre/ecoCystem/src/world.cpp
-new
+/home/alexandre/ecoCystem/src/main.cpp
+glad/glad.h
 -
-iostream
+GLFW/glfw3.h
 -
 world.hpp
 /home/alexandre/ecoCystem/src/world.hpp

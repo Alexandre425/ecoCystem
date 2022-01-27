@@ -1,0 +1,9 @@
+[submodule "3rd/glm"]
+	path = 3rd/glm
+	url = https://github.com/g-truc/glm
+[submodule "3rd/imgui"]
+	path = 3rd/imgui
+	url = https://github.com/ocornut/imgui
+[submodule "3rd/json"]
+	path = 3rd/json
+	url = https://github.com/nlohmann/json
