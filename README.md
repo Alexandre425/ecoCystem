@@ -36,6 +36,7 @@ Objectives for the plant implementation.
   * Height
   * Width
   * Fruit size
+  * Leaf size (smaller leaves are more cold resistant)
 
 ### Creatures
 A few ideas for how the creatures are to be implemented.
