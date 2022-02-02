@@ -1,6 +1,9 @@
 #include <iostream>
 #include <fstream>
 #include <streambuf>
+#include <glm/glm.hpp>
+#include <glm/gtx/matrix_transform_2d.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 #include "graphics.hpp"
 
@@ -9,67 +12,14 @@ void resize_callback(GLFWwindow *window, int w, int h)
     glViewport(0, 0, w, h);
 }
 
-char* fileToString(const char* path)
-{
-    std::ifstream file(path);
-    std::string str((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
-    // The function allocates char arrays with the source code that must be deleted later
-    char* cstr = new char[str.length()+1];
-    sprintf(cstr, "%s", str.c_str());
-    return cstr;
-}
-
-// To check if the compilation was successful
-inline void shaderCompileCheck(int status, unsigned int shader, const char* path)
-{
-    if (!status)
-    {
-        char info[512];
-        glGetShaderInfoLog(shader, 512, NULL, info);
-        std::cerr << "ERROR: Could not compile shader \"" << path << "\": " << info << std::endl;
-        exit(-1);
-    }
-}
-
-// Creates a shader program from vertex and fragment shaders and returns it's identifier
-unsigned int createShaderProgram(const char* vs_path, const char* fs_path)
-{
-    // Read the shaders
-    const char* vshader_source = fileToString(vs_path);
-    const char* fshader_source = fileToString(fs_path);
-
-    // Create and compile
-    unsigned int vshader = glCreateShader(GL_VERTEX_SHADER);
-    unsigned int fshader = glCreateShader(GL_FRAGMENT_SHADER);
-    glShaderSource(vshader, 1, &vshader_source, NULL);
-    glShaderSource(fshader, 1, &fshader_source, NULL);
-    glCompileShader(vshader);
-    glCompileShader(fshader);
-
-    // Verify compilation
-    int status;
-    glGetShaderiv(vshader, GL_COMPILE_STATUS, &status);
-    shaderCompileCheck(status, vshader, vs_path);
-    glGetShaderiv(fshader, GL_COMPILE_STATUS, &status);
-    shaderCompileCheck(status, fshader, fs_path);
-
-    // Add to program and link
-    unsigned int program = glCreateProgram();
-    glAttachShader(program, vshader);
-    glAttachShader(program, fshader);
-    glLinkProgram(program);
-
-    // Verify
-    glGetShaderiv(program, GL_COMPILE_STATUS, &status);
-    shaderCompileCheck(status, program, "shader program");
-
-    // Cleanup
-    delete vshader_source, fshader_source;
-    glDeleteShader(vshader);
-    glDeleteShader(fshader);
-
-    return program;
-}
+static float arrow[] = {
+    0, 1,
+    0, -0.75,
+    1, -1,
+    0, 1,
+    0, -0.75,
+    -1, -1,
+};
 
 Graphics::Graphics()
 {
@@ -87,31 +37,103 @@ Graphics::Graphics()
     glViewport(0, 0, 800, 600);
     glfwSetFramebufferSizeCallback(window, resize_callback);
 
-    // Configure the GPU vertex buffer
-    glGenBuffers(1, &vertex_buffer);
-    glBindBuffer(GL_ARRAY_BUFFER, vertex_buffer);
+    // Configure the vertex buffers and arrays
+    // Arrow (creature)
+    glGenVertexArrays(1, &arrow_VAO);                               // Create the VAO
+    glBindVertexArray(arrow_VAO);                                   // Bind it
+    glGenBuffers(1, &arrow_VBO);                                            // Create the VBO
+    glGenBuffers(1, &pos_VBO);
+    glGenBuffers(1, &size_VBO);
+    glGenBuffers(1, &color_VBO);
+
+    glBindBuffer(GL_ARRAY_BUFFER, arrow_VBO);                               // Bind it
+    glBufferData(GL_ARRAY_BUFFER, sizeof(arrow), arrow, GL_STATIC_DRAW);    // Send its data
+    glBindBuffer(GL_ARRAY_BUFFER, 0);                                       // Unbind it
+
+    glEnableVertexAttribArray(0);                                   // Create a VAA
+    glBindBuffer(GL_ARRAY_BUFFER, arrow_VBO);                       // Bind the arrow VBO
+    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 0, nullptr);    // Set the VAA attributes
+    glBindBuffer(GL_ARRAY_BUFFER, 0);                               // Unbind the arrow VBO
+
+    glEnableVertexAttribArray(1);
+    glBindBuffer(GL_ARRAY_BUFFER, pos_VBO);
+    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 0, nullptr);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glVertexAttribDivisor(1, 1);                                    // Set the VAA's divisor
+
+    glEnableVertexAttribArray(2);
+    glBindBuffer(GL_ARRAY_BUFFER, size_VBO);
+    glVertexAttribPointer(2, 1, GL_FLOAT, GL_FALSE, 0, nullptr);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glVertexAttribDivisor(2, 1);
+
+    glEnableVertexAttribArray(3);
+    glBindBuffer(GL_ARRAY_BUFFER, color_VBO);
+    glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, 0, nullptr);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glVertexAttribDivisor(3, 1);
+
+    glBindVertexArray(0);
+
+    // Square
+
+
+    // Configure the vertex arrays
 
     // Create the necessary shader programs
-    tri_shader = createShaderProgram("res/shaders/triangle.vs", "res/shaders/triangle.fs");
+    tri_shader = std::make_unique<Shader>("res/shaders/triangle.vs", "res/shaders/triangle.fs");
 }
 
 Graphics::~Graphics()
 {
+    tri_shader.reset();
+
     glfwTerminate();
 }
 
 void Graphics::drawTestTriangle()
 {
-    const float vertices[] = {
-        -0.5f, -0.5f,
-        0.5f, -0.5f,
-        0.0f,  0.5f
+    static float pos[]
+    {
+        0, 0,
+        0.1, 0.1
+    };
+
+    static float size[]
+    {
+        0.6, 0.2
+    };
+
+    static float color[]
+    {
+        0, 0, 0,
+        1, 1, 0.3
     };
 
     // Transfer the data
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_DYNAMIC_DRAW);
+    glBindBuffer(GL_ARRAY_BUFFER, pos_VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(pos), pos, GL_DYNAMIC_DRAW);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+    glBindBuffer(GL_ARRAY_BUFFER, size_VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(size), size, GL_DYNAMIC_DRAW);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+    glBindBuffer(GL_ARRAY_BUFFER, color_VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(color), color, GL_DYNAMIC_DRAW);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+    glm::mat4 transform = glm::mat4(1.0f);
+    glm::mat4 model = glm::mat4(1.0f);
+
+    tri_shader->bind();
+    //auto view_loc = glGetUniformLocation(tri_shader->id, "view");
+    //glUniformMatrix4fv(view_loc, 1, GL_FALSE, glm::value_ptr(transform));
+    //auto model_loc = glGetUniformLocation(tri_shader->id, "model");
+    //glUniformMatrix4fv(model_loc, 1, GL_FALSE, glm::value_ptr(model));
+
+    glBindVertexArray(arrow_VAO);
+    glDrawArraysInstanced(GL_TRIANGLES, 0, 6, 2);
+
     // Configure the vertex attributes
-    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), nullptr);
-    glEnableVertexAttribArray(0);
-    glUseProgram(tri_shader);
 }

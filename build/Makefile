@@ -123,32 +123,32 @@ ecoCystem/fast:
 	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/build
 .PHONY : ecoCystem/fast
 
-3rd/glad/src/glad.o: 3rd/glad/src/glad.cpp.o
+3rd/glad/src/glad.o: 3rd/glad/src/glad.c.o
 
 .PHONY : 3rd/glad/src/glad.o
 
 # target to build an object file
-3rd/glad/src/glad.cpp.o:
-	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/glad/src/glad.cpp.o
-.PHONY : 3rd/glad/src/glad.cpp.o
+3rd/glad/src/glad.c.o:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/glad/src/glad.c.o
+.PHONY : 3rd/glad/src/glad.c.o
 
-3rd/glad/src/glad.i: 3rd/glad/src/glad.cpp.i
+3rd/glad/src/glad.i: 3rd/glad/src/glad.c.i
 
 .PHONY : 3rd/glad/src/glad.i
 
 # target to preprocess a source file
-3rd/glad/src/glad.cpp.i:
-	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/glad/src/glad.cpp.i
-.PHONY : 3rd/glad/src/glad.cpp.i
+3rd/glad/src/glad.c.i:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/glad/src/glad.c.i
+.PHONY : 3rd/glad/src/glad.c.i
 
-3rd/glad/src/glad.s: 3rd/glad/src/glad.cpp.s
+3rd/glad/src/glad.s: 3rd/glad/src/glad.c.s
 
 .PHONY : 3rd/glad/src/glad.s
 
 # target to generate assembly for a file
-3rd/glad/src/glad.cpp.s:
-	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/glad/src/glad.cpp.s
-.PHONY : 3rd/glad/src/glad.cpp.s
+3rd/glad/src/glad.c.s:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/glad/src/glad.c.s
+.PHONY : 3rd/glad/src/glad.c.s
 
 src/graphics.o: src/graphics.cpp.o
 
@@ -204,6 +204,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/shader.o: src/shader.cpp.o
+
+.PHONY : src/shader.o
+
+# target to build an object file
+src/shader.cpp.o:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/shader.cpp.o
+.PHONY : src/shader.cpp.o
+
+src/shader.i: src/shader.cpp.i
+
+.PHONY : src/shader.i
+
+# target to preprocess a source file
+src/shader.cpp.i:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/shader.cpp.i
+.PHONY : src/shader.cpp.i
+
+src/shader.s: src/shader.cpp.s
+
+.PHONY : src/shader.s
+
+# target to generate assembly for a file
+src/shader.cpp.s:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/shader.cpp.s
+.PHONY : src/shader.cpp.s
+
 src/world.o: src/world.cpp.o
 
 .PHONY : src/world.o
@@ -249,6 +276,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/shader.o"
+	@echo "... src/shader.i"
+	@echo "... src/shader.s"
 	@echo "... src/world.o"
 	@echo "... src/world.i"
 	@echo "... src/world.s"

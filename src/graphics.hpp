@@ -1,8 +1,11 @@
 #pragma once
 
+#include <memory>
 #include <string>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+
+#include "shader.hpp"
 
 // Handles the window and rendering
 class Graphics
@@ -18,8 +21,13 @@ class Graphics
         void drawTestTriangle();
 
     private:
-        unsigned int vertex_buffer;
+        unsigned int arrow_VBO;
+        unsigned int pos_VBO;
+        unsigned int size_VBO;
+        unsigned int color_VBO;
+
+        unsigned int arrow_VAO;
 
         // Compiled vertex, fragment and program shaders
-        unsigned int tri_shader;
+        std::unique_ptr<Shader> tri_shader;
 };
