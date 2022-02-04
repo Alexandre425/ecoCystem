@@ -19,11 +19,20 @@ void resize_callback(GLFWwindow *window, int w, int h)
     cam.w = w; cam.h = h;
 }
 
+// Note that this is to be used with GL_TRIANGLE_FAN mode
 static float arrow[] = {
     0, -0.75,
     -1, -1,
     0, 1,
     1, -1
+};
+
+static int arrow_color_idx[] =
+{
+    0,
+    0,
+    1,
+    0
 };
 
 Graphics::Graphics()
@@ -33,14 +42,21 @@ Graphics::Graphics()
     glfwInitHint(GLFW_VERSION_MAJOR, 3);
     glfwInitHint(GLFW_VERSION_MINOR, 3);
     glfwInitHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    // MSAA
+    glfwWindowHint(GLFW_SAMPLES, 4);
 
     window = glfwCreateWindow(800, 600, "ecoCystem", NULL, NULL);
     glfwMakeContextCurrent(window);
+
+    // v-sync
+    glfwSwapInterval(1);
 
     // Configure glad
     gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
     glViewport(0, 0, 800, 600);
     glfwSetFramebufferSizeCallback(window, resize_callback);
+
+    glEnable(GL_MULTISAMPLE);
 
     // Configure the vertex buffers and arrays
     // Arrow (creature)
@@ -48,7 +64,8 @@ Graphics::Graphics()
     glBindVertexArray(arrow_VAO);                                   // Bind it
     glGenBuffers(1, &arrow_VBO);                                            // Create the VBO
     glGenBuffers(1, &model_VBO);
-    glGenBuffers(1, &color_VBO);
+    glGenBuffers(1, &color1_VBO);
+    glGenBuffers(1, &color2_VBO);
 
     glBindBuffer(GL_ARRAY_BUFFER, arrow_VBO);                               // Bind it
     glBufferData(GL_ARRAY_BUFFER, sizeof(arrow), arrow, GL_STATIC_DRAW);    // Send its data
@@ -76,10 +93,16 @@ Graphics::Graphics()
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 
     glEnableVertexAttribArray(4);
-    glBindBuffer(GL_ARRAY_BUFFER, color_VBO);
+    glBindBuffer(GL_ARRAY_BUFFER, color1_VBO);
     glVertexAttribPointer(4, 3, GL_FLOAT, GL_FALSE, 0, nullptr);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glVertexAttribDivisor(4, 1);
+
+    glEnableVertexAttribArray(5);
+    glBindBuffer(GL_ARRAY_BUFFER, color2_VBO);
+    glVertexAttribPointer(5, 3, GL_FLOAT, GL_FALSE, 0, nullptr);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glVertexAttribDivisor(5, 1);
 
     glBindVertexArray(0);
 
@@ -96,10 +119,16 @@ Graphics::~Graphics()
 
 void Graphics::draw_test(float delta)
 {
-    static float color[]
+    static float color1[]
     {
-        0, 0, 0,
+        1, 0, 0,
         1, 1, 0.3
+    };
+
+    static float color2[]
+    {
+        0, 1, 0,
+        0, 0.2, 0.3
     };
 
     static float ang = 0.0;
@@ -120,8 +149,12 @@ void Graphics::draw_test(float delta)
     glBufferData(GL_ARRAY_BUFFER, sizeof(model), model, GL_DYNAMIC_DRAW);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 
-    glBindBuffer(GL_ARRAY_BUFFER, color_VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(color), color, GL_DYNAMIC_DRAW);
+    glBindBuffer(GL_ARRAY_BUFFER, color1_VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(color1), color1, GL_DYNAMIC_DRAW);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+    glBindBuffer(GL_ARRAY_BUFFER, color2_VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(color2), color2, GL_DYNAMIC_DRAW);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 
     glm::mat3 view(1.0);

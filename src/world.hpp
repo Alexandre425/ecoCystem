@@ -3,12 +3,14 @@
 #include <chrono>
 
 #include "graphics.hpp"
+#include "user_interface.hpp"
 
 class World
 {
     public:
 
         Graphics graphics;
+        GUI interface;
 
         using timepoint = std::chrono::time_point<std::chrono::steady_clock>;
         // Start time of the simulation

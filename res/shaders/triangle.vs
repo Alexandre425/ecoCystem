@@ -2,7 +2,8 @@
 
 layout (location = 0) in vec2 vert;
 layout (location = 1) in mat3 model;
-layout (location = 4) in vec3 iColor;
+layout (location = 4) in vec3 iColor1;
+layout (location = 5) in vec3 iColor2;
 
 out vec3 color;
 
@@ -14,5 +15,5 @@ void main()
 
     gl_Position = vec4((view * model * vec3(vert, 1.0)).xy, 0.0, 1.0);
 
-    color = iColor;
+    color = gl_VertexID == 0 ? iColor2 : iColor1;
 }

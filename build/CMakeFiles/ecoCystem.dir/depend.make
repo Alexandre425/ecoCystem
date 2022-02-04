@@ -5,6 +5,48 @@ CMakeFiles/ecoCystem.dir/3rd/glad/src/glad.c.o: ../3rd/glad/include/KHR/khrplatf
 CMakeFiles/ecoCystem.dir/3rd/glad/src/glad.c.o: ../3rd/glad/include/glad/glad.h
 CMakeFiles/ecoCystem.dir/3rd/glad/src/glad.c.o: ../3rd/glad/src/glad.c
 
+CMakeFiles/ecoCystem.dir/3rd/imgui/backends/imgui_impl_glfw.cpp.o: ../3rd/imgui/imconfig.h
+CMakeFiles/ecoCystem.dir/3rd/imgui/backends/imgui_impl_glfw.cpp.o: ../3rd/imgui/imgui.h
+CMakeFiles/ecoCystem.dir/3rd/imgui/backends/imgui_impl_glfw.cpp.o: ../3rd/imgui/backends/imgui_impl_glfw.cpp
+CMakeFiles/ecoCystem.dir/3rd/imgui/backends/imgui_impl_glfw.cpp.o: ../3rd/imgui/backends/imgui_impl_glfw.h
+
+CMakeFiles/ecoCystem.dir/3rd/imgui/backends/imgui_impl_opengl3.cpp.o: ../3rd/imgui/imconfig.h
+CMakeFiles/ecoCystem.dir/3rd/imgui/backends/imgui_impl_opengl3.cpp.o: ../3rd/imgui/imgui.h
+CMakeFiles/ecoCystem.dir/3rd/imgui/backends/imgui_impl_opengl3.cpp.o: ../3rd/imgui/backends/imgui_impl_opengl3.cpp
+CMakeFiles/ecoCystem.dir/3rd/imgui/backends/imgui_impl_opengl3.cpp.o: ../3rd/imgui/backends/imgui_impl_opengl3.h
+CMakeFiles/ecoCystem.dir/3rd/imgui/backends/imgui_impl_opengl3.cpp.o: ../3rd/imgui/backends/imgui_impl_opengl3_loader.h
+
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui.cpp.o: ../3rd/imgui/imconfig.h
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui.cpp.o: ../3rd/imgui/imgui.cpp
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui.cpp.o: ../3rd/imgui/imgui.h
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui.cpp.o: ../3rd/imgui/imgui_internal.h
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui.cpp.o: ../3rd/imgui/imstb_textedit.h
+
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_demo.cpp.o: ../3rd/imgui/imconfig.h
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_demo.cpp.o: ../3rd/imgui/imgui.h
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_demo.cpp.o: ../3rd/imgui/imgui_demo.cpp
+
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_draw.cpp.o: ../3rd/imgui/imconfig.h
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_draw.cpp.o: ../3rd/imgui/imgui.h
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_draw.cpp.o: ../3rd/imgui/imgui_draw.cpp
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_draw.cpp.o: ../3rd/imgui/imgui_internal.h
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_draw.cpp.o: ../3rd/imgui/imstb_rectpack.h
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_draw.cpp.o: ../3rd/imgui/imstb_textedit.h
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_draw.cpp.o: ../3rd/imgui/imstb_truetype.h
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_draw.cpp.o: ../3rd/imgui/misc/freetype/imgui_freetype.h
+
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_tables.cpp.o: ../3rd/imgui/imconfig.h
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_tables.cpp.o: ../3rd/imgui/imgui.h
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_tables.cpp.o: ../3rd/imgui/imgui_internal.h
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_tables.cpp.o: ../3rd/imgui/imgui_tables.cpp
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_tables.cpp.o: ../3rd/imgui/imstb_textedit.h
+
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_widgets.cpp.o: ../3rd/imgui/imconfig.h
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_widgets.cpp.o: ../3rd/imgui/imgui.h
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_widgets.cpp.o: ../3rd/imgui/imgui_internal.h
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_widgets.cpp.o: ../3rd/imgui/imgui_widgets.cpp
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_widgets.cpp.o: ../3rd/imgui/imstb_textedit.h
+
 CMakeFiles/ecoCystem.dir/src/graphics.cpp.o: ../3rd/glad/include/KHR/khrplatform.h
 CMakeFiles/ecoCystem.dir/src/graphics.cpp.o: ../3rd/glad/include/glad/glad.h
 CMakeFiles/ecoCystem.dir/src/graphics.cpp.o: ../3rd/glm/glm/common.hpp
@@ -210,17 +252,23 @@ CMakeFiles/ecoCystem.dir/src/graphics.cpp.o: ../3rd/glm/glm/vec2.hpp
 CMakeFiles/ecoCystem.dir/src/graphics.cpp.o: ../3rd/glm/glm/vec3.hpp
 CMakeFiles/ecoCystem.dir/src/graphics.cpp.o: ../3rd/glm/glm/vec4.hpp
 CMakeFiles/ecoCystem.dir/src/graphics.cpp.o: ../3rd/glm/glm/vector_relational.hpp
+CMakeFiles/ecoCystem.dir/src/graphics.cpp.o: ../3rd/imgui/imconfig.h
+CMakeFiles/ecoCystem.dir/src/graphics.cpp.o: ../3rd/imgui/imgui.h
 CMakeFiles/ecoCystem.dir/src/graphics.cpp.o: ../src/graphics.cpp
 CMakeFiles/ecoCystem.dir/src/graphics.cpp.o: ../src/graphics.hpp
 CMakeFiles/ecoCystem.dir/src/graphics.cpp.o: ../src/shader.hpp
+CMakeFiles/ecoCystem.dir/src/graphics.cpp.o: ../src/user_interface.hpp
 CMakeFiles/ecoCystem.dir/src/graphics.cpp.o: ../src/utilities.hpp
 CMakeFiles/ecoCystem.dir/src/graphics.cpp.o: ../src/world.hpp
 
 CMakeFiles/ecoCystem.dir/src/main.cpp.o: ../3rd/glad/include/KHR/khrplatform.h
 CMakeFiles/ecoCystem.dir/src/main.cpp.o: ../3rd/glad/include/glad/glad.h
+CMakeFiles/ecoCystem.dir/src/main.cpp.o: ../3rd/imgui/imconfig.h
+CMakeFiles/ecoCystem.dir/src/main.cpp.o: ../3rd/imgui/imgui.h
 CMakeFiles/ecoCystem.dir/src/main.cpp.o: ../src/graphics.hpp
 CMakeFiles/ecoCystem.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/ecoCystem.dir/src/main.cpp.o: ../src/shader.hpp
+CMakeFiles/ecoCystem.dir/src/main.cpp.o: ../src/user_interface.hpp
 CMakeFiles/ecoCystem.dir/src/main.cpp.o: ../src/utilities.hpp
 CMakeFiles/ecoCystem.dir/src/main.cpp.o: ../src/world.hpp
 
@@ -229,10 +277,20 @@ CMakeFiles/ecoCystem.dir/src/shader.cpp.o: ../3rd/glad/include/glad/glad.h
 CMakeFiles/ecoCystem.dir/src/shader.cpp.o: ../src/shader.cpp
 CMakeFiles/ecoCystem.dir/src/shader.cpp.o: ../src/shader.hpp
 
+CMakeFiles/ecoCystem.dir/src/user_interface.cpp.o: ../3rd/imgui/backends/imgui_impl_glfw.h
+CMakeFiles/ecoCystem.dir/src/user_interface.cpp.o: ../3rd/imgui/backends/imgui_impl_opengl3.h
+CMakeFiles/ecoCystem.dir/src/user_interface.cpp.o: ../3rd/imgui/imconfig.h
+CMakeFiles/ecoCystem.dir/src/user_interface.cpp.o: ../3rd/imgui/imgui.h
+CMakeFiles/ecoCystem.dir/src/user_interface.cpp.o: ../src/user_interface.cpp
+CMakeFiles/ecoCystem.dir/src/user_interface.cpp.o: ../src/user_interface.hpp
+
 CMakeFiles/ecoCystem.dir/src/world.cpp.o: ../3rd/glad/include/KHR/khrplatform.h
 CMakeFiles/ecoCystem.dir/src/world.cpp.o: ../3rd/glad/include/glad/glad.h
+CMakeFiles/ecoCystem.dir/src/world.cpp.o: ../3rd/imgui/imconfig.h
+CMakeFiles/ecoCystem.dir/src/world.cpp.o: ../3rd/imgui/imgui.h
 CMakeFiles/ecoCystem.dir/src/world.cpp.o: ../src/graphics.hpp
 CMakeFiles/ecoCystem.dir/src/world.cpp.o: ../src/shader.hpp
+CMakeFiles/ecoCystem.dir/src/world.cpp.o: ../src/user_interface.hpp
 CMakeFiles/ecoCystem.dir/src/world.cpp.o: ../src/utilities.hpp
 CMakeFiles/ecoCystem.dir/src/world.cpp.o: ../src/world.cpp
 CMakeFiles/ecoCystem.dir/src/world.cpp.o: ../src/world.hpp

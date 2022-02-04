@@ -1,27 +1,67 @@
 [
 {
   "directory": "/home/alexandre/ecoCystem/build",
-  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include -I/home/alexandre/ecoCystem/3rd/glm  -g   -std=gnu++17 -o CMakeFiles/ecoCystem.dir/src/graphics.cpp.o -c /home/alexandre/ecoCystem/src/graphics.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include -I/home/alexandre/ecoCystem/3rd/glm -I/home/alexandre/ecoCystem/3rd/imgui  -g   -std=gnu++17 -o CMakeFiles/ecoCystem.dir/src/graphics.cpp.o -c /home/alexandre/ecoCystem/src/graphics.cpp",
   "file": "/home/alexandre/ecoCystem/src/graphics.cpp"
 },
 {
   "directory": "/home/alexandre/ecoCystem/build",
-  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include -I/home/alexandre/ecoCystem/3rd/glm  -g   -std=gnu++17 -o CMakeFiles/ecoCystem.dir/src/main.cpp.o -c /home/alexandre/ecoCystem/src/main.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include -I/home/alexandre/ecoCystem/3rd/glm -I/home/alexandre/ecoCystem/3rd/imgui  -g   -std=gnu++17 -o CMakeFiles/ecoCystem.dir/src/main.cpp.o -c /home/alexandre/ecoCystem/src/main.cpp",
   "file": "/home/alexandre/ecoCystem/src/main.cpp"
 },
 {
   "directory": "/home/alexandre/ecoCystem/build",
-  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include -I/home/alexandre/ecoCystem/3rd/glm  -g   -std=gnu++17 -o CMakeFiles/ecoCystem.dir/src/shader.cpp.o -c /home/alexandre/ecoCystem/src/shader.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include -I/home/alexandre/ecoCystem/3rd/glm -I/home/alexandre/ecoCystem/3rd/imgui  -g   -std=gnu++17 -o CMakeFiles/ecoCystem.dir/src/shader.cpp.o -c /home/alexandre/ecoCystem/src/shader.cpp",
   "file": "/home/alexandre/ecoCystem/src/shader.cpp"
 },
 {
   "directory": "/home/alexandre/ecoCystem/build",
-  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include -I/home/alexandre/ecoCystem/3rd/glm  -g   -std=gnu++17 -o CMakeFiles/ecoCystem.dir/src/world.cpp.o -c /home/alexandre/ecoCystem/src/world.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include -I/home/alexandre/ecoCystem/3rd/glm -I/home/alexandre/ecoCystem/3rd/imgui  -g   -std=gnu++17 -o CMakeFiles/ecoCystem.dir/src/user_interface.cpp.o -c /home/alexandre/ecoCystem/src/user_interface.cpp",
+  "file": "/home/alexandre/ecoCystem/src/user_interface.cpp"
+},
+{
+  "directory": "/home/alexandre/ecoCystem/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include -I/home/alexandre/ecoCystem/3rd/glm -I/home/alexandre/ecoCystem/3rd/imgui  -g   -std=gnu++17 -o CMakeFiles/ecoCystem.dir/src/world.cpp.o -c /home/alexandre/ecoCystem/src/world.cpp",
   "file": "/home/alexandre/ecoCystem/src/world.cpp"
 },
 {
   "directory": "/home/alexandre/ecoCystem/build",
-  "command": "/bin/x86_64-linux-gnu-gcc-9  -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include -I/home/alexandre/ecoCystem/3rd/glm  -g   -o CMakeFiles/ecoCystem.dir/3rd/glad/src/glad.c.o   -c /home/alexandre/ecoCystem/3rd/glad/src/glad.c",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include -I/home/alexandre/ecoCystem/3rd/glm -I/home/alexandre/ecoCystem/3rd/imgui  -g   -std=gnu++17 -o CMakeFiles/ecoCystem.dir/3rd/imgui/imgui.cpp.o -c /home/alexandre/ecoCystem/3rd/imgui/imgui.cpp",
+  "file": "/home/alexandre/ecoCystem/3rd/imgui/imgui.cpp"
+},
+{
+  "directory": "/home/alexandre/ecoCystem/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include -I/home/alexandre/ecoCystem/3rd/glm -I/home/alexandre/ecoCystem/3rd/imgui  -g   -std=gnu++17 -o CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_demo.cpp.o -c /home/alexandre/ecoCystem/3rd/imgui/imgui_demo.cpp",
+  "file": "/home/alexandre/ecoCystem/3rd/imgui/imgui_demo.cpp"
+},
+{
+  "directory": "/home/alexandre/ecoCystem/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include -I/home/alexandre/ecoCystem/3rd/glm -I/home/alexandre/ecoCystem/3rd/imgui  -g   -std=gnu++17 -o CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_draw.cpp.o -c /home/alexandre/ecoCystem/3rd/imgui/imgui_draw.cpp",
+  "file": "/home/alexandre/ecoCystem/3rd/imgui/imgui_draw.cpp"
+},
+{
+  "directory": "/home/alexandre/ecoCystem/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include -I/home/alexandre/ecoCystem/3rd/glm -I/home/alexandre/ecoCystem/3rd/imgui  -g   -std=gnu++17 -o CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_tables.cpp.o -c /home/alexandre/ecoCystem/3rd/imgui/imgui_tables.cpp",
+  "file": "/home/alexandre/ecoCystem/3rd/imgui/imgui_tables.cpp"
+},
+{
+  "directory": "/home/alexandre/ecoCystem/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include -I/home/alexandre/ecoCystem/3rd/glm -I/home/alexandre/ecoCystem/3rd/imgui  -g   -std=gnu++17 -o CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_widgets.cpp.o -c /home/alexandre/ecoCystem/3rd/imgui/imgui_widgets.cpp",
+  "file": "/home/alexandre/ecoCystem/3rd/imgui/imgui_widgets.cpp"
+},
+{
+  "directory": "/home/alexandre/ecoCystem/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include -I/home/alexandre/ecoCystem/3rd/glm -I/home/alexandre/ecoCystem/3rd/imgui  -g   -std=gnu++17 -o CMakeFiles/ecoCystem.dir/3rd/imgui/backends/imgui_impl_opengl3.cpp.o -c /home/alexandre/ecoCystem/3rd/imgui/backends/imgui_impl_opengl3.cpp",
+  "file": "/home/alexandre/ecoCystem/3rd/imgui/backends/imgui_impl_opengl3.cpp"
+},
+{
+  "directory": "/home/alexandre/ecoCystem/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include -I/home/alexandre/ecoCystem/3rd/glm -I/home/alexandre/ecoCystem/3rd/imgui  -g   -std=gnu++17 -o CMakeFiles/ecoCystem.dir/3rd/imgui/backends/imgui_impl_glfw.cpp.o -c /home/alexandre/ecoCystem/3rd/imgui/backends/imgui_impl_glfw.cpp",
+  "file": "/home/alexandre/ecoCystem/3rd/imgui/backends/imgui_impl_glfw.cpp"
+},
+{
+  "directory": "/home/alexandre/ecoCystem/build",
+  "command": "/bin/x86_64-linux-gnu-gcc-9  -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include -I/home/alexandre/ecoCystem/3rd/glm -I/home/alexandre/ecoCystem/3rd/imgui  -g   -o CMakeFiles/ecoCystem.dir/3rd/glad/src/glad.c.o   -c /home/alexandre/ecoCystem/3rd/glad/src/glad.c",
   "file": "/home/alexandre/ecoCystem/3rd/glad/src/glad.c"
 }
 ]

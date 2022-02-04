@@ -5,6 +5,48 @@ CMakeFiles/ecoCystem.dir/3rd/glad/src/glad.c.o
  ../3rd/glad/include/KHR/khrplatform.h
  ../3rd/glad/include/glad/glad.h
  /home/alexandre/ecoCystem/3rd/glad/src/glad.c
+CMakeFiles/ecoCystem.dir/3rd/imgui/backends/imgui_impl_glfw.cpp.o
+ ../3rd/imgui/imconfig.h
+ ../3rd/imgui/imgui.h
+ /home/alexandre/ecoCystem/3rd/imgui/backends/imgui_impl_glfw.cpp
+ /home/alexandre/ecoCystem/3rd/imgui/backends/imgui_impl_glfw.h
+CMakeFiles/ecoCystem.dir/3rd/imgui/backends/imgui_impl_opengl3.cpp.o
+ ../3rd/imgui/imconfig.h
+ ../3rd/imgui/imgui.h
+ /home/alexandre/ecoCystem/3rd/imgui/backends/imgui_impl_opengl3.cpp
+ /home/alexandre/ecoCystem/3rd/imgui/backends/imgui_impl_opengl3.h
+ /home/alexandre/ecoCystem/3rd/imgui/backends/imgui_impl_opengl3_loader.h
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui.cpp.o
+ /home/alexandre/ecoCystem/3rd/imgui/imconfig.h
+ /home/alexandre/ecoCystem/3rd/imgui/imgui.cpp
+ /home/alexandre/ecoCystem/3rd/imgui/imgui.h
+ /home/alexandre/ecoCystem/3rd/imgui/imgui_internal.h
+ /home/alexandre/ecoCystem/3rd/imgui/imstb_textedit.h
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_demo.cpp.o
+ /home/alexandre/ecoCystem/3rd/imgui/imconfig.h
+ /home/alexandre/ecoCystem/3rd/imgui/imgui.h
+ /home/alexandre/ecoCystem/3rd/imgui/imgui_demo.cpp
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_draw.cpp.o
+ /home/alexandre/ecoCystem/3rd/imgui/imconfig.h
+ /home/alexandre/ecoCystem/3rd/imgui/imgui.h
+ /home/alexandre/ecoCystem/3rd/imgui/imgui_draw.cpp
+ /home/alexandre/ecoCystem/3rd/imgui/imgui_internal.h
+ /home/alexandre/ecoCystem/3rd/imgui/imstb_rectpack.h
+ /home/alexandre/ecoCystem/3rd/imgui/imstb_textedit.h
+ /home/alexandre/ecoCystem/3rd/imgui/imstb_truetype.h
+ /home/alexandre/ecoCystem/3rd/imgui/misc/freetype/imgui_freetype.h
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_tables.cpp.o
+ /home/alexandre/ecoCystem/3rd/imgui/imconfig.h
+ /home/alexandre/ecoCystem/3rd/imgui/imgui.h
+ /home/alexandre/ecoCystem/3rd/imgui/imgui_internal.h
+ /home/alexandre/ecoCystem/3rd/imgui/imgui_tables.cpp
+ /home/alexandre/ecoCystem/3rd/imgui/imstb_textedit.h
+CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_widgets.cpp.o
+ /home/alexandre/ecoCystem/3rd/imgui/imconfig.h
+ /home/alexandre/ecoCystem/3rd/imgui/imgui.h
+ /home/alexandre/ecoCystem/3rd/imgui/imgui_internal.h
+ /home/alexandre/ecoCystem/3rd/imgui/imgui_widgets.cpp
+ /home/alexandre/ecoCystem/3rd/imgui/imstb_textedit.h
 CMakeFiles/ecoCystem.dir/src/graphics.cpp.o
  ../3rd/glad/include/KHR/khrplatform.h
  ../3rd/glad/include/glad/glad.h
@@ -211,17 +253,23 @@ CMakeFiles/ecoCystem.dir/src/graphics.cpp.o
  ../3rd/glm/glm/vec3.hpp
  ../3rd/glm/glm/vec4.hpp
  ../3rd/glm/glm/vector_relational.hpp
+ ../3rd/imgui/imconfig.h
+ ../3rd/imgui/imgui.h
  /home/alexandre/ecoCystem/src/graphics.cpp
  /home/alexandre/ecoCystem/src/graphics.hpp
  /home/alexandre/ecoCystem/src/shader.hpp
+ /home/alexandre/ecoCystem/src/user_interface.hpp
  /home/alexandre/ecoCystem/src/utilities.hpp
  /home/alexandre/ecoCystem/src/world.hpp
 CMakeFiles/ecoCystem.dir/src/main.cpp.o
  ../3rd/glad/include/KHR/khrplatform.h
  ../3rd/glad/include/glad/glad.h
+ ../3rd/imgui/imconfig.h
+ ../3rd/imgui/imgui.h
  /home/alexandre/ecoCystem/src/graphics.hpp
  /home/alexandre/ecoCystem/src/main.cpp
  /home/alexandre/ecoCystem/src/shader.hpp
+ /home/alexandre/ecoCystem/src/user_interface.hpp
  /home/alexandre/ecoCystem/src/utilities.hpp
  /home/alexandre/ecoCystem/src/world.hpp
 CMakeFiles/ecoCystem.dir/src/shader.cpp.o
@@ -229,11 +277,21 @@ CMakeFiles/ecoCystem.dir/src/shader.cpp.o
  ../3rd/glad/include/glad/glad.h
  /home/alexandre/ecoCystem/src/shader.cpp
  /home/alexandre/ecoCystem/src/shader.hpp
+CMakeFiles/ecoCystem.dir/src/user_interface.cpp.o
+ ../3rd/imgui/backends/imgui_impl_glfw.h
+ ../3rd/imgui/backends/imgui_impl_opengl3.h
+ ../3rd/imgui/imconfig.h
+ ../3rd/imgui/imgui.h
+ /home/alexandre/ecoCystem/src/user_interface.cpp
+ /home/alexandre/ecoCystem/src/user_interface.hpp
 CMakeFiles/ecoCystem.dir/src/world.cpp.o
  ../3rd/glad/include/KHR/khrplatform.h
  ../3rd/glad/include/glad/glad.h
+ ../3rd/imgui/imconfig.h
+ ../3rd/imgui/imgui.h
  /home/alexandre/ecoCystem/src/graphics.hpp
  /home/alexandre/ecoCystem/src/shader.hpp
+ /home/alexandre/ecoCystem/src/user_interface.hpp
  /home/alexandre/ecoCystem/src/utilities.hpp
  /home/alexandre/ecoCystem/src/world.cpp
  /home/alexandre/ecoCystem/src/world.hpp

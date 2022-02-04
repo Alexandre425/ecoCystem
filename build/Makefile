@@ -150,6 +150,195 @@ ecoCystem/fast:
 	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/glad/src/glad.c.s
 .PHONY : 3rd/glad/src/glad.c.s
 
+3rd/imgui/backends/imgui_impl_glfw.o: 3rd/imgui/backends/imgui_impl_glfw.cpp.o
+
+.PHONY : 3rd/imgui/backends/imgui_impl_glfw.o
+
+# target to build an object file
+3rd/imgui/backends/imgui_impl_glfw.cpp.o:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/imgui/backends/imgui_impl_glfw.cpp.o
+.PHONY : 3rd/imgui/backends/imgui_impl_glfw.cpp.o
+
+3rd/imgui/backends/imgui_impl_glfw.i: 3rd/imgui/backends/imgui_impl_glfw.cpp.i
+
+.PHONY : 3rd/imgui/backends/imgui_impl_glfw.i
+
+# target to preprocess a source file
+3rd/imgui/backends/imgui_impl_glfw.cpp.i:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/imgui/backends/imgui_impl_glfw.cpp.i
+.PHONY : 3rd/imgui/backends/imgui_impl_glfw.cpp.i
+
+3rd/imgui/backends/imgui_impl_glfw.s: 3rd/imgui/backends/imgui_impl_glfw.cpp.s
+
+.PHONY : 3rd/imgui/backends/imgui_impl_glfw.s
+
+# target to generate assembly for a file
+3rd/imgui/backends/imgui_impl_glfw.cpp.s:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/imgui/backends/imgui_impl_glfw.cpp.s
+.PHONY : 3rd/imgui/backends/imgui_impl_glfw.cpp.s
+
+3rd/imgui/backends/imgui_impl_opengl3.o: 3rd/imgui/backends/imgui_impl_opengl3.cpp.o
+
+.PHONY : 3rd/imgui/backends/imgui_impl_opengl3.o
+
+# target to build an object file
+3rd/imgui/backends/imgui_impl_opengl3.cpp.o:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/imgui/backends/imgui_impl_opengl3.cpp.o
+.PHONY : 3rd/imgui/backends/imgui_impl_opengl3.cpp.o
+
+3rd/imgui/backends/imgui_impl_opengl3.i: 3rd/imgui/backends/imgui_impl_opengl3.cpp.i
+
+.PHONY : 3rd/imgui/backends/imgui_impl_opengl3.i
+
+# target to preprocess a source file
+3rd/imgui/backends/imgui_impl_opengl3.cpp.i:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/imgui/backends/imgui_impl_opengl3.cpp.i
+.PHONY : 3rd/imgui/backends/imgui_impl_opengl3.cpp.i
+
+3rd/imgui/backends/imgui_impl_opengl3.s: 3rd/imgui/backends/imgui_impl_opengl3.cpp.s
+
+.PHONY : 3rd/imgui/backends/imgui_impl_opengl3.s
+
+# target to generate assembly for a file
+3rd/imgui/backends/imgui_impl_opengl3.cpp.s:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/imgui/backends/imgui_impl_opengl3.cpp.s
+.PHONY : 3rd/imgui/backends/imgui_impl_opengl3.cpp.s
+
+3rd/imgui/imgui.o: 3rd/imgui/imgui.cpp.o
+
+.PHONY : 3rd/imgui/imgui.o
+
+# target to build an object file
+3rd/imgui/imgui.cpp.o:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/imgui/imgui.cpp.o
+.PHONY : 3rd/imgui/imgui.cpp.o
+
+3rd/imgui/imgui.i: 3rd/imgui/imgui.cpp.i
+
+.PHONY : 3rd/imgui/imgui.i
+
+# target to preprocess a source file
+3rd/imgui/imgui.cpp.i:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/imgui/imgui.cpp.i
+.PHONY : 3rd/imgui/imgui.cpp.i
+
+3rd/imgui/imgui.s: 3rd/imgui/imgui.cpp.s
+
+.PHONY : 3rd/imgui/imgui.s
+
+# target to generate assembly for a file
+3rd/imgui/imgui.cpp.s:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/imgui/imgui.cpp.s
+.PHONY : 3rd/imgui/imgui.cpp.s
+
+3rd/imgui/imgui_demo.o: 3rd/imgui/imgui_demo.cpp.o
+
+.PHONY : 3rd/imgui/imgui_demo.o
+
+# target to build an object file
+3rd/imgui/imgui_demo.cpp.o:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_demo.cpp.o
+.PHONY : 3rd/imgui/imgui_demo.cpp.o
+
+3rd/imgui/imgui_demo.i: 3rd/imgui/imgui_demo.cpp.i
+
+.PHONY : 3rd/imgui/imgui_demo.i
+
+# target to preprocess a source file
+3rd/imgui/imgui_demo.cpp.i:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_demo.cpp.i
+.PHONY : 3rd/imgui/imgui_demo.cpp.i
+
+3rd/imgui/imgui_demo.s: 3rd/imgui/imgui_demo.cpp.s
+
+.PHONY : 3rd/imgui/imgui_demo.s
+
+# target to generate assembly for a file
+3rd/imgui/imgui_demo.cpp.s:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_demo.cpp.s
+.PHONY : 3rd/imgui/imgui_demo.cpp.s
+
+3rd/imgui/imgui_draw.o: 3rd/imgui/imgui_draw.cpp.o
+
+.PHONY : 3rd/imgui/imgui_draw.o
+
+# target to build an object file
+3rd/imgui/imgui_draw.cpp.o:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_draw.cpp.o
+.PHONY : 3rd/imgui/imgui_draw.cpp.o
+
+3rd/imgui/imgui_draw.i: 3rd/imgui/imgui_draw.cpp.i
+
+.PHONY : 3rd/imgui/imgui_draw.i
+
+# target to preprocess a source file
+3rd/imgui/imgui_draw.cpp.i:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_draw.cpp.i
+.PHONY : 3rd/imgui/imgui_draw.cpp.i
+
+3rd/imgui/imgui_draw.s: 3rd/imgui/imgui_draw.cpp.s
+
+.PHONY : 3rd/imgui/imgui_draw.s
+
+# target to generate assembly for a file
+3rd/imgui/imgui_draw.cpp.s:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_draw.cpp.s
+.PHONY : 3rd/imgui/imgui_draw.cpp.s
+
+3rd/imgui/imgui_tables.o: 3rd/imgui/imgui_tables.cpp.o
+
+.PHONY : 3rd/imgui/imgui_tables.o
+
+# target to build an object file
+3rd/imgui/imgui_tables.cpp.o:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_tables.cpp.o
+.PHONY : 3rd/imgui/imgui_tables.cpp.o
+
+3rd/imgui/imgui_tables.i: 3rd/imgui/imgui_tables.cpp.i
+
+.PHONY : 3rd/imgui/imgui_tables.i
+
+# target to preprocess a source file
+3rd/imgui/imgui_tables.cpp.i:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_tables.cpp.i
+.PHONY : 3rd/imgui/imgui_tables.cpp.i
+
+3rd/imgui/imgui_tables.s: 3rd/imgui/imgui_tables.cpp.s
+
+.PHONY : 3rd/imgui/imgui_tables.s
+
+# target to generate assembly for a file
+3rd/imgui/imgui_tables.cpp.s:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_tables.cpp.s
+.PHONY : 3rd/imgui/imgui_tables.cpp.s
+
+3rd/imgui/imgui_widgets.o: 3rd/imgui/imgui_widgets.cpp.o
+
+.PHONY : 3rd/imgui/imgui_widgets.o
+
+# target to build an object file
+3rd/imgui/imgui_widgets.cpp.o:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_widgets.cpp.o
+.PHONY : 3rd/imgui/imgui_widgets.cpp.o
+
+3rd/imgui/imgui_widgets.i: 3rd/imgui/imgui_widgets.cpp.i
+
+.PHONY : 3rd/imgui/imgui_widgets.i
+
+# target to preprocess a source file
+3rd/imgui/imgui_widgets.cpp.i:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_widgets.cpp.i
+.PHONY : 3rd/imgui/imgui_widgets.cpp.i
+
+3rd/imgui/imgui_widgets.s: 3rd/imgui/imgui_widgets.cpp.s
+
+.PHONY : 3rd/imgui/imgui_widgets.s
+
+# target to generate assembly for a file
+3rd/imgui/imgui_widgets.cpp.s:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_widgets.cpp.s
+.PHONY : 3rd/imgui/imgui_widgets.cpp.s
+
 src/graphics.o: src/graphics.cpp.o
 
 .PHONY : src/graphics.o
@@ -231,6 +420,33 @@ src/shader.cpp.s:
 	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/shader.cpp.s
 .PHONY : src/shader.cpp.s
 
+src/user_interface.o: src/user_interface.cpp.o
+
+.PHONY : src/user_interface.o
+
+# target to build an object file
+src/user_interface.cpp.o:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/user_interface.cpp.o
+.PHONY : src/user_interface.cpp.o
+
+src/user_interface.i: src/user_interface.cpp.i
+
+.PHONY : src/user_interface.i
+
+# target to preprocess a source file
+src/user_interface.cpp.i:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/user_interface.cpp.i
+.PHONY : src/user_interface.cpp.i
+
+src/user_interface.s: src/user_interface.cpp.s
+
+.PHONY : src/user_interface.s
+
+# target to generate assembly for a file
+src/user_interface.cpp.s:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/user_interface.cpp.s
+.PHONY : src/user_interface.cpp.s
+
 src/world.o: src/world.cpp.o
 
 .PHONY : src/world.o
@@ -270,6 +486,27 @@ help:
 	@echo "... 3rd/glad/src/glad.o"
 	@echo "... 3rd/glad/src/glad.i"
 	@echo "... 3rd/glad/src/glad.s"
+	@echo "... 3rd/imgui/backends/imgui_impl_glfw.o"
+	@echo "... 3rd/imgui/backends/imgui_impl_glfw.i"
+	@echo "... 3rd/imgui/backends/imgui_impl_glfw.s"
+	@echo "... 3rd/imgui/backends/imgui_impl_opengl3.o"
+	@echo "... 3rd/imgui/backends/imgui_impl_opengl3.i"
+	@echo "... 3rd/imgui/backends/imgui_impl_opengl3.s"
+	@echo "... 3rd/imgui/imgui.o"
+	@echo "... 3rd/imgui/imgui.i"
+	@echo "... 3rd/imgui/imgui.s"
+	@echo "... 3rd/imgui/imgui_demo.o"
+	@echo "... 3rd/imgui/imgui_demo.i"
+	@echo "... 3rd/imgui/imgui_demo.s"
+	@echo "... 3rd/imgui/imgui_draw.o"
+	@echo "... 3rd/imgui/imgui_draw.i"
+	@echo "... 3rd/imgui/imgui_draw.s"
+	@echo "... 3rd/imgui/imgui_tables.o"
+	@echo "... 3rd/imgui/imgui_tables.i"
+	@echo "... 3rd/imgui/imgui_tables.s"
+	@echo "... 3rd/imgui/imgui_widgets.o"
+	@echo "... 3rd/imgui/imgui_widgets.i"
+	@echo "... 3rd/imgui/imgui_widgets.s"
 	@echo "... src/graphics.o"
 	@echo "... src/graphics.i"
 	@echo "... src/graphics.s"
@@ -279,6 +516,9 @@ help:
 	@echo "... src/shader.o"
 	@echo "... src/shader.i"
 	@echo "... src/shader.s"
+	@echo "... src/user_interface.o"
+	@echo "... src/user_interface.i"
+	@echo "... src/user_interface.s"
 	@echo "... src/world.o"
 	@echo "... src/world.i"
 	@echo "... src/world.s"

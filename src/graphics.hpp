@@ -52,7 +52,8 @@ class Graphics
     private:
         unsigned int arrow_VBO;
         unsigned int model_VBO;
-        unsigned int color_VBO;
+        unsigned int color1_VBO;
+        unsigned int color2_VBO;
 
         unsigned int arrow_VAO;
 

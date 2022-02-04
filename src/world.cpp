@@ -41,10 +41,12 @@ void key_poll(const float delta)
 }
 
 World::World()
+    : interface(graphics.window)
 {
     epoch = std::chrono::steady_clock::now();
     glfwSetKeyCallback(graphics.window, key_callback);
     glfwSetScrollCallback(graphics.window, scroll_callback);
+
 }
 
 World::~World()
@@ -70,6 +72,8 @@ void World::mainLoop()
         glClear(GL_COLOR_BUFFER_BIT);
 
         graphics.draw_test(delta);
+
+        interface.update();
 
         glfwSwapBuffers(graphics.window);
 
