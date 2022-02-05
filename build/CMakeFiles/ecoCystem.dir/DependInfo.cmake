@@ -15,6 +15,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../3rd/glad/include"
   "../3rd/glm"
   "../3rd/imgui"
+  "../3rd/json/include"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/alexandre/ecoCystem/3rd/imgui/backends/imgui_impl_glfw.cpp" "/home/alexandre/ecoCystem/build/CMakeFiles/ecoCystem.dir/3rd/imgui/backends/imgui_impl_glfw.cpp.o"
@@ -38,6 +39,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../3rd/glad/include"
   "../3rd/glm"
   "../3rd/imgui"
+  "../3rd/json/include"
   )
 
 # Targets to which this target links.

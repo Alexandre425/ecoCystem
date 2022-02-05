@@ -19,4 +19,7 @@ private:
     // Creates the simulation control window
     void simulation_control();
 
+    // Creates the creature inspector window
+    void creature_inspector();
+
 };
