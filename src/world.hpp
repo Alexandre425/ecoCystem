@@ -17,15 +17,24 @@ class World
         timepoint epoch;
         // Time of the last tick
         timepoint last_tick;
-        // Target simulation delta time
-        float target_delta_time = 1 / 60.0;
+        // Last sim delta
+        float last_delta;
+
+        // Target simulation ticks per second
+        int ticks_per_sec = 60;
+
+        // Simulation delta time
+        float sim_delta = 1 / 60.0;
 
         // Initializes all the systems
         World();
         // Frees all the system resources
         ~World();
 
-        void mainLoop();
+        void main_loop();
+
+        // Runs a simulation tick
+        void update();
     private:
 
 };

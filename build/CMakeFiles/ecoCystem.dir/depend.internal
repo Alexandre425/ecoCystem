@@ -278,12 +278,18 @@ CMakeFiles/ecoCystem.dir/src/shader.cpp.o
  /home/alexandre/ecoCystem/src/shader.cpp
  /home/alexandre/ecoCystem/src/shader.hpp
 CMakeFiles/ecoCystem.dir/src/user_interface.cpp.o
+ ../3rd/glad/include/KHR/khrplatform.h
+ ../3rd/glad/include/glad/glad.h
  ../3rd/imgui/backends/imgui_impl_glfw.h
  ../3rd/imgui/backends/imgui_impl_opengl3.h
  ../3rd/imgui/imconfig.h
  ../3rd/imgui/imgui.h
+ /home/alexandre/ecoCystem/src/graphics.hpp
+ /home/alexandre/ecoCystem/src/shader.hpp
  /home/alexandre/ecoCystem/src/user_interface.cpp
  /home/alexandre/ecoCystem/src/user_interface.hpp
+ /home/alexandre/ecoCystem/src/utilities.hpp
+ /home/alexandre/ecoCystem/src/world.hpp
 CMakeFiles/ecoCystem.dir/src/world.cpp.o
  ../3rd/glad/include/KHR/khrplatform.h
  ../3rd/glad/include/glad/glad.h

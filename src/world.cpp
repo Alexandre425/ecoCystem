@@ -46,7 +46,6 @@ World::World()
     epoch = std::chrono::steady_clock::now();
     glfwSetKeyCallback(graphics.window, key_callback);
     glfwSetScrollCallback(graphics.window, scroll_callback);
-
 }
 
 World::~World()
@@ -54,29 +53,38 @@ World::~World()
 
 }
 
-void World::mainLoop()
+void World::main_loop()
 {
     while (!glfwWindowShouldClose(graphics.window))
     {
-        auto now   = std::chrono::steady_clock::now();
-        auto delta = std::chrono::duration_cast<std::chrono::duration<float>>(now - last_tick).count();
-        last_tick  = now;
+        // TODO: move frame delta out, render in a separate thread
+        auto now = std::chrono::steady_clock::now();
+        auto frame_delta = std::chrono::duration_cast<std::chrono::duration<float>>(now - last_tick).count();
+        last_tick = now;
+        last_delta = frame_delta;
 
         glfwPollEvents();
 
-        key_poll(delta);
+        key_poll(frame_delta);
 
-        graphics.camera.update(delta);
+        this->update();
+
+        graphics.camera.update(frame_delta);
 
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        graphics.draw_test(delta);
+        graphics.draw_test(frame_delta);
 
         interface.update();
 
         glfwSwapBuffers(graphics.window);
 
-        std::this_thread::sleep_for(std::chrono::duration<float>(std::max(target_delta_time - delta, (float)0.0)));
+        std::this_thread::sleep_for(std::chrono::duration<float>(std::max(1 / static_cast<float>(ticks_per_sec) - frame_delta, (float)0.0)));
     }
+}
+
+void World::update()
+{
+
 }

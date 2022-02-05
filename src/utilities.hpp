@@ -1,4 +1,4 @@
-
+#pragma once
 
 template<typename T> inline
 T low_pass_filter(const T &val, const T &new_val, const float &K, const float &delta)

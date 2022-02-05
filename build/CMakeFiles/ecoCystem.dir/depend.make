@@ -277,12 +277,18 @@ CMakeFiles/ecoCystem.dir/src/shader.cpp.o: ../3rd/glad/include/glad/glad.h
 CMakeFiles/ecoCystem.dir/src/shader.cpp.o: ../src/shader.cpp
 CMakeFiles/ecoCystem.dir/src/shader.cpp.o: ../src/shader.hpp
 
+CMakeFiles/ecoCystem.dir/src/user_interface.cpp.o: ../3rd/glad/include/KHR/khrplatform.h
+CMakeFiles/ecoCystem.dir/src/user_interface.cpp.o: ../3rd/glad/include/glad/glad.h
 CMakeFiles/ecoCystem.dir/src/user_interface.cpp.o: ../3rd/imgui/backends/imgui_impl_glfw.h
 CMakeFiles/ecoCystem.dir/src/user_interface.cpp.o: ../3rd/imgui/backends/imgui_impl_opengl3.h
 CMakeFiles/ecoCystem.dir/src/user_interface.cpp.o: ../3rd/imgui/imconfig.h
 CMakeFiles/ecoCystem.dir/src/user_interface.cpp.o: ../3rd/imgui/imgui.h
+CMakeFiles/ecoCystem.dir/src/user_interface.cpp.o: ../src/graphics.hpp
+CMakeFiles/ecoCystem.dir/src/user_interface.cpp.o: ../src/shader.hpp
 CMakeFiles/ecoCystem.dir/src/user_interface.cpp.o: ../src/user_interface.cpp
 CMakeFiles/ecoCystem.dir/src/user_interface.cpp.o: ../src/user_interface.hpp
+CMakeFiles/ecoCystem.dir/src/user_interface.cpp.o: ../src/utilities.hpp
+CMakeFiles/ecoCystem.dir/src/user_interface.cpp.o: ../src/world.hpp
 
 CMakeFiles/ecoCystem.dir/src/world.cpp.o: ../3rd/glad/include/KHR/khrplatform.h
 CMakeFiles/ecoCystem.dir/src/world.cpp.o: ../3rd/glad/include/glad/glad.h
