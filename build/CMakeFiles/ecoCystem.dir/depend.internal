@@ -321,6 +321,7 @@ CMakeFiles/ecoCystem.dir/src/world.cpp.o
  ../3rd/entt/single_include/entt/entt.hpp
  ../3rd/glad/include/KHR/khrplatform.h
  ../3rd/glad/include/glad/glad.h
+ ../3rd/imgui/backends/imgui_impl_glfw.h
  ../3rd/imgui/imconfig.h
  ../3rd/imgui/imgui.h
  /home/alexandre/ecoCystem/src/graphics.hpp

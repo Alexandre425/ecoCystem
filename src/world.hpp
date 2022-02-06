@@ -14,7 +14,7 @@ class World
     public:
 
         Graphics graphics;
-        GUI interface;
+        std::unique_ptr<GUI> interface;
 
         using timepoint = std::chrono::time_point<std::chrono::steady_clock>;
         // Start time of the simulation

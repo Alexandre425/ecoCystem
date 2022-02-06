@@ -1,7 +1,10 @@
 #include <iostream>
 #include <algorithm>
 #include <thread>
+#include <backends/imgui_impl_glfw.h>
+
 #include "world.hpp"
+
 
 extern World world;
 
@@ -41,11 +44,12 @@ void key_poll(const float delta)
 }
 
 World::World()
-    : interface(graphics.window)
 {
     epoch = std::chrono::steady_clock::now();
     glfwSetKeyCallback(graphics.window, key_callback);
     glfwSetScrollCallback(graphics.window, scroll_callback);
+
+    interface = std::make_unique<GUI>(graphics.window);
 
     systems =
     {
@@ -98,7 +102,7 @@ void World::render_loop()
         }
 
         // Render the interface and capture input
-        interface.update();
+        interface->update();
 
         glfwSwapBuffers(graphics.window);
 

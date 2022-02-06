@@ -26,6 +26,28 @@ GUI::~GUI()
     ImGui::DestroyContext();
 }
 
+void GUI::update()
+{
+    ImGui_ImplOpenGL3_NewFrame();
+    ImGui_ImplGlfw_NewFrame();
+    ImGui::NewFrame();
+
+    if (!world.started)
+    {
+        start_menu();
+    }
+    else
+    {
+        GUI::main_menu_bar();
+        if (show_simulation_control)    GUI::simulation_control();
+        if (show_entity_inspector)      GUI::entity_inspector();
+        ImGui::ShowDemoWindow();
+    }
+
+    ImGui::Render();
+    ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+}
+
 // Helper to display a little (?) mark which shows a tooltip when hovered.
 // In your own code you may want to display an actual icon if you are using a merged icon fonts (see docs/FONTS.md)
 static void HelpMarker(const char* desc)
@@ -43,10 +65,11 @@ static void HelpMarker(const char* desc)
 
 void GUI::start_menu()
 {
-    const ImGuiWindowFlags flags = ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoSavedSettings;
+    // Creates a fullscreen window
+    const ImGuiWindowFlags flags = ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoSavedSettings;
     const ImGuiViewport* viewport = ImGui::GetMainViewport();
-    ImGui::SetNextWindowPos(viewport->Pos);
-    ImGui::SetNextWindowSize(viewport->Size);
+    ImGui::SetNextWindowPos(viewport->WorkPos);
+    ImGui::SetNextWindowSize(viewport->WorkSize);
 
     ImGui::Begin("Start Menu", nullptr, flags);
 
@@ -57,6 +80,22 @@ void GUI::start_menu()
 
     ImGui::End();
 }
+
+void GUI::main_menu_bar()
+{
+    if (ImGui::BeginMainMenuBar())
+    {
+        if (ImGui::BeginMenu("Windows"))
+        {
+            ImGui::MenuItem("Simulation Control", nullptr, &show_simulation_control);
+            ImGui::MenuItem("Entity Inspector", nullptr, &show_entity_inspector);
+
+            ImGui::EndMenu();
+        }
+        ImGui::EndMainMenuBar();
+    }
+}
+
 
 void GUI::simulation_control()
 {
@@ -90,27 +129,14 @@ void GUI::simulation_control()
     ImGui::SameLine();
     ImGui::Text("TPS");
 
+    ImGui::End();
+}
 
+void GUI::entity_inspector()
+{
+    ImGui::Begin("Entity Inspector");
 
     ImGui::End();
 }
 
-void GUI::update()
-{
-    ImGui_ImplOpenGL3_NewFrame();
-    ImGui_ImplGlfw_NewFrame();
-    ImGui::NewFrame();
 
-    if (!world.started)
-    {
-        start_menu();
-    }
-    else
-    {
-        GUI::simulation_control();
-        ImGui::ShowDemoWindow();
-    }
-
-    ImGui::Render();
-    ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-}
