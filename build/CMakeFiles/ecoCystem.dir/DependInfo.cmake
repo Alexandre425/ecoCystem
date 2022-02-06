@@ -16,6 +16,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../3rd/glm"
   "../3rd/imgui"
   "../3rd/json/include"
+  "../3rd/entt/single_include"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/alexandre/ecoCystem/3rd/imgui/backends/imgui_impl_glfw.cpp" "/home/alexandre/ecoCystem/build/CMakeFiles/ecoCystem.dir/3rd/imgui/backends/imgui_impl_glfw.cpp.o"
@@ -28,6 +29,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/alexandre/ecoCystem/src/graphics.cpp" "/home/alexandre/ecoCystem/build/CMakeFiles/ecoCystem.dir/src/graphics.cpp.o"
   "/home/alexandre/ecoCystem/src/main.cpp" "/home/alexandre/ecoCystem/build/CMakeFiles/ecoCystem.dir/src/main.cpp.o"
   "/home/alexandre/ecoCystem/src/shader.cpp" "/home/alexandre/ecoCystem/build/CMakeFiles/ecoCystem.dir/src/shader.cpp.o"
+  "/home/alexandre/ecoCystem/src/systems/movement_system.cpp" "/home/alexandre/ecoCystem/build/CMakeFiles/ecoCystem.dir/src/systems/movement_system.cpp.o"
+  "/home/alexandre/ecoCystem/src/systems/system.cpp" "/home/alexandre/ecoCystem/build/CMakeFiles/ecoCystem.dir/src/systems/system.cpp.o"
   "/home/alexandre/ecoCystem/src/user_interface.cpp" "/home/alexandre/ecoCystem/build/CMakeFiles/ecoCystem.dir/src/user_interface.cpp.o"
   "/home/alexandre/ecoCystem/src/world.cpp" "/home/alexandre/ecoCystem/build/CMakeFiles/ecoCystem.dir/src/world.cpp.o"
   )
@@ -40,6 +43,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../3rd/glm"
   "../3rd/imgui"
   "../3rd/json/include"
+  "../3rd/entt/single_include"
   )
 
 # Targets to which this target links.

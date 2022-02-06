@@ -10,6 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ecoCystem.dir/src/graphics.cpp.o"
   "CMakeFiles/ecoCystem.dir/src/main.cpp.o"
   "CMakeFiles/ecoCystem.dir/src/shader.cpp.o"
+  "CMakeFiles/ecoCystem.dir/src/systems/movement_system.cpp.o"
+  "CMakeFiles/ecoCystem.dir/src/systems/system.cpp.o"
   "CMakeFiles/ecoCystem.dir/src/user_interface.cpp.o"
   "CMakeFiles/ecoCystem.dir/src/world.cpp.o"
   "ecoCystem"

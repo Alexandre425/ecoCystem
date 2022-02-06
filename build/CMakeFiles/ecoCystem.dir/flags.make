@@ -7,11 +7,11 @@ C_FLAGS = -g
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include -I/home/alexandre/ecoCystem/3rd/glm -I/home/alexandre/ecoCystem/3rd/imgui -I/home/alexandre/ecoCystem/3rd/json/include 
+C_INCLUDES = -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include -I/home/alexandre/ecoCystem/3rd/glm -I/home/alexandre/ecoCystem/3rd/imgui -I/home/alexandre/ecoCystem/3rd/json/include -I/home/alexandre/ecoCystem/3rd/entt/single_include 
 
 CXX_FLAGS = -g   -std=gnu++17
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include -I/home/alexandre/ecoCystem/3rd/glm -I/home/alexandre/ecoCystem/3rd/imgui -I/home/alexandre/ecoCystem/3rd/json/include 
+CXX_INCLUDES = -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include -I/home/alexandre/ecoCystem/3rd/glm -I/home/alexandre/ecoCystem/3rd/imgui -I/home/alexandre/ecoCystem/3rd/json/include -I/home/alexandre/ecoCystem/3rd/entt/single_include 
 

@@ -41,6 +41,23 @@ static void HelpMarker(const char* desc)
     }
 }
 
+void GUI::start_menu()
+{
+    const ImGuiWindowFlags flags = ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoSavedSettings;
+    const ImGuiViewport* viewport = ImGui::GetMainViewport();
+    ImGui::SetNextWindowPos(viewport->Pos);
+    ImGui::SetNextWindowSize(viewport->Size);
+
+    ImGui::Begin("Start Menu", nullptr, flags);
+
+    if (ImGui::Button("Start Simulation"))
+    {
+        world.start_sim();
+    }
+
+    ImGui::End();
+}
+
 void GUI::simulation_control()
 {
     ImGui::Begin("Simulation Control");
@@ -78,16 +95,21 @@ void GUI::simulation_control()
     ImGui::End();
 }
 
-
 void GUI::update()
 {
     ImGui_ImplOpenGL3_NewFrame();
     ImGui_ImplGlfw_NewFrame();
     ImGui::NewFrame();
 
-    ImGui::ShowDemoWindow();
-
-    GUI::simulation_control();
+    if (!world.started)
+    {
+        start_menu();
+    }
+    else
+    {
+        GUI::simulation_control();
+        ImGui::ShowDemoWindow();
+    }
 
     ImGui::Render();
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());

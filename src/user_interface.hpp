@@ -16,6 +16,9 @@ public:
 
 private:
 
+    // Creates the start menu window
+    void start_menu();
+
     // Creates the simulation control window
     void simulation_control();
 

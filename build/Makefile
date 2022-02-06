@@ -420,6 +420,60 @@ src/shader.cpp.s:
 	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/shader.cpp.s
 .PHONY : src/shader.cpp.s
 
+src/systems/movement_system.o: src/systems/movement_system.cpp.o
+
+.PHONY : src/systems/movement_system.o
+
+# target to build an object file
+src/systems/movement_system.cpp.o:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/systems/movement_system.cpp.o
+.PHONY : src/systems/movement_system.cpp.o
+
+src/systems/movement_system.i: src/systems/movement_system.cpp.i
+
+.PHONY : src/systems/movement_system.i
+
+# target to preprocess a source file
+src/systems/movement_system.cpp.i:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/systems/movement_system.cpp.i
+.PHONY : src/systems/movement_system.cpp.i
+
+src/systems/movement_system.s: src/systems/movement_system.cpp.s
+
+.PHONY : src/systems/movement_system.s
+
+# target to generate assembly for a file
+src/systems/movement_system.cpp.s:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/systems/movement_system.cpp.s
+.PHONY : src/systems/movement_system.cpp.s
+
+src/systems/system.o: src/systems/system.cpp.o
+
+.PHONY : src/systems/system.o
+
+# target to build an object file
+src/systems/system.cpp.o:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/systems/system.cpp.o
+.PHONY : src/systems/system.cpp.o
+
+src/systems/system.i: src/systems/system.cpp.i
+
+.PHONY : src/systems/system.i
+
+# target to preprocess a source file
+src/systems/system.cpp.i:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/systems/system.cpp.i
+.PHONY : src/systems/system.cpp.i
+
+src/systems/system.s: src/systems/system.cpp.s
+
+.PHONY : src/systems/system.s
+
+# target to generate assembly for a file
+src/systems/system.cpp.s:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/systems/system.cpp.s
+.PHONY : src/systems/system.cpp.s
+
 src/user_interface.o: src/user_interface.cpp.o
 
 .PHONY : src/user_interface.o
@@ -516,6 +570,12 @@ help:
 	@echo "... src/shader.o"
 	@echo "... src/shader.i"
 	@echo "... src/shader.s"
+	@echo "... src/systems/movement_system.o"
+	@echo "... src/systems/movement_system.i"
+	@echo "... src/systems/movement_system.s"
+	@echo "... src/systems/system.o"
+	@echo "... src/systems/system.i"
+	@echo "... src/systems/system.s"
 	@echo "... src/user_interface.o"
 	@echo "... src/user_interface.i"
 	@echo "... src/user_interface.s"

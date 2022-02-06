@@ -46,45 +46,89 @@ World::World()
     epoch = std::chrono::steady_clock::now();
     glfwSetKeyCallback(graphics.window, key_callback);
     glfwSetScrollCallback(graphics.window, scroll_callback);
+
+    systems =
+    {
+        new MovementSys()
+    };
+
 }
 
 World::~World()
 {
-
+    for (auto sys : systems)
+        delete sys;
 }
 
-void World::main_loop()
+void World::start_sim()
 {
+    started = true;
+}
+
+void World::render_loop()
+{
+    using clock = std::chrono::steady_clock;
+
+    const float target_delta = 1 / 60.0f;
+    auto last_frame_time = clock::now();
     while (!glfwWindowShouldClose(graphics.window))
     {
-        // TODO: move frame delta out, render in a separate thread
-        auto now = std::chrono::steady_clock::now();
-        auto frame_delta = std::chrono::duration_cast<std::chrono::duration<float>>(now - last_tick).count();
-        last_tick = now;
-        last_delta = frame_delta;
-
-        glfwPollEvents();
-
-        key_poll(frame_delta);
-
-        this->update();
-
-        graphics.camera.update(frame_delta);
+        // Calculate the delta time and update the last frame time
+        auto start = clock::now();
+        auto delta = std::chrono::duration_cast<std::chrono::duration<float>>(start - last_frame_time).count();
+        last_frame_time = start;
 
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        graphics.draw_test(frame_delta);
+        // Controls
+        glfwPollEvents();
 
+        if (!started)
+        {
+            render_start_menu(delta);
+        }
+        else
+        {
+            key_poll(delta);
+            // Update camera position and zoom
+            graphics.camera.update(delta);
+
+            render_sim(delta);
+        }
+
+        // Render the interface and capture input
         interface.update();
 
         glfwSwapBuffers(graphics.window);
 
-        std::this_thread::sleep_for(std::chrono::duration<float>(std::max(1 / static_cast<float>(ticks_per_sec) - frame_delta, (float)0.0)));
+        // Calculate how long the render took and compensate for it
+        auto lag = std::chrono::duration_cast<std::chrono::duration<float>>(clock::now() - start).count();
+        std::this_thread::sleep_for(std::chrono::duration<float>(std::max(target_delta - lag, (float)0.0)));
     }
 }
 
-void World::update()
+void World::render_start_menu(float delta)
 {
+
+}
+
+void World::render_sim(float delta)
+{
+    graphics.draw_test(delta);
+}
+
+
+void World::sim_loop()
+{
+    // Update all systems
+    for (const auto &sys : systems)
+    {
+        sys->update(sim_delta);
+    }
+
+    registry_mutex.lock();
+    // Process events
+    registry_mutex.unlock();
 
 }

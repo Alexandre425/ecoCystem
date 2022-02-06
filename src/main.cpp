@@ -14,7 +14,7 @@ int main (int argc, char *argv[])
     // Go one folder back
     std::filesystem::current_path(path.substr(0, path.find_last_of('/') + 1) + "..");
 
-    world.main_loop();
+    world.render_loop();
 
     return 0;
 }
