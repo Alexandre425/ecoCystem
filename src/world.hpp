@@ -5,6 +5,7 @@
 #include <mutex>
 
 #include "graphics.hpp"
+#include "rng.hpp"
 #include "user_interface.hpp"
 #include "systems/system.hpp"
 #include "systems/all_systems.hpp"
@@ -15,6 +16,14 @@ class World
 
         Graphics graphics;
         std::unique_ptr<GUI> interface;
+        // Random number generator
+        NoiseRNG rng;
+
+
+        static constexpr double MIN_SIZE = 20;
+        static constexpr double MAX_SIZE = 10000;
+        // World size in meters (always square)
+        double size;
 
         using timepoint = std::chrono::time_point<std::chrono::steady_clock>;
         // Start time of the simulation

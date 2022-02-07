@@ -5,8 +5,9 @@ A life, evolution and ecosystem simulator written in C++
 ### Project objectives
 - [x] OpenGL window and basic drawing
 - [x] ImGui integration
-- [ ] Add basic plants that spawn randomly
+- [ ] ~~Add basic plants that spawn randomly~~
 - [ ] Basic herbivore creatures
+- [ ] Add a grazing system and grass depletion/regrowth
 - [ ] Creature reproduction
 - [ ] Creature traits
 - [ ] Decision system assigning scores to each of a creature's needs

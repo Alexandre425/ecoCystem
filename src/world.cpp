@@ -1,6 +1,7 @@
 #include <iostream>
 #include <algorithm>
 #include <thread>
+#include <time.h>
 #include <backends/imgui_impl_glfw.h>
 
 #include "world.hpp"
@@ -44,6 +45,7 @@ void key_poll(const float delta)
 }
 
 World::World()
+    : rng(time(NULL))
 {
     epoch = std::chrono::steady_clock::now();
     glfwSetKeyCallback(graphics.window, key_callback);
@@ -134,5 +136,4 @@ void World::sim_loop()
     registry_mutex.lock();
     // Process events
     registry_mutex.unlock();
-
 }

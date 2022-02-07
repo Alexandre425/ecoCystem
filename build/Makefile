@@ -339,6 +339,60 @@ ecoCystem/fast:
 	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_widgets.cpp.s
 .PHONY : 3rd/imgui/imgui_widgets.cpp.s
 
+src/components.o: src/components.cpp.o
+
+.PHONY : src/components.o
+
+# target to build an object file
+src/components.cpp.o:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/components.cpp.o
+.PHONY : src/components.cpp.o
+
+src/components.i: src/components.cpp.i
+
+.PHONY : src/components.i
+
+# target to preprocess a source file
+src/components.cpp.i:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/components.cpp.i
+.PHONY : src/components.cpp.i
+
+src/components.s: src/components.cpp.s
+
+.PHONY : src/components.s
+
+# target to generate assembly for a file
+src/components.cpp.s:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/components.cpp.s
+.PHONY : src/components.cpp.s
+
+src/creature.o: src/creature.cpp.o
+
+.PHONY : src/creature.o
+
+# target to build an object file
+src/creature.cpp.o:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/creature.cpp.o
+.PHONY : src/creature.cpp.o
+
+src/creature.i: src/creature.cpp.i
+
+.PHONY : src/creature.i
+
+# target to preprocess a source file
+src/creature.cpp.i:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/creature.cpp.i
+.PHONY : src/creature.cpp.i
+
+src/creature.s: src/creature.cpp.s
+
+.PHONY : src/creature.s
+
+# target to generate assembly for a file
+src/creature.cpp.s:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/creature.cpp.s
+.PHONY : src/creature.cpp.s
+
 src/graphics.o: src/graphics.cpp.o
 
 .PHONY : src/graphics.o
@@ -392,6 +446,33 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/rng.o: src/rng.cpp.o
+
+.PHONY : src/rng.o
+
+# target to build an object file
+src/rng.cpp.o:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/rng.cpp.o
+.PHONY : src/rng.cpp.o
+
+src/rng.i: src/rng.cpp.i
+
+.PHONY : src/rng.i
+
+# target to preprocess a source file
+src/rng.cpp.i:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/rng.cpp.i
+.PHONY : src/rng.cpp.i
+
+src/rng.s: src/rng.cpp.s
+
+.PHONY : src/rng.s
+
+# target to generate assembly for a file
+src/rng.cpp.s:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/rng.cpp.s
+.PHONY : src/rng.cpp.s
 
 src/shader.o: src/shader.cpp.o
 
@@ -561,12 +642,21 @@ help:
 	@echo "... 3rd/imgui/imgui_widgets.o"
 	@echo "... 3rd/imgui/imgui_widgets.i"
 	@echo "... 3rd/imgui/imgui_widgets.s"
+	@echo "... src/components.o"
+	@echo "... src/components.i"
+	@echo "... src/components.s"
+	@echo "... src/creature.o"
+	@echo "... src/creature.i"
+	@echo "... src/creature.s"
 	@echo "... src/graphics.o"
 	@echo "... src/graphics.i"
 	@echo "... src/graphics.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/rng.o"
+	@echo "... src/rng.i"
+	@echo "... src/rng.s"
 	@echo "... src/shader.o"
 	@echo "... src/shader.i"
 	@echo "... src/shader.s"

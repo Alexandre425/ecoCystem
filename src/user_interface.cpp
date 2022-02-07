@@ -73,6 +73,12 @@ void GUI::start_menu()
 
     ImGui::Begin("Start Menu", nullptr, flags);
 
+    ImGui::PushItemWidth(ImGui::GetFontSize() * 20);
+
+    static float size = world.MAX_SIZE / 2.0f;
+    ImGui::SliderFloat("World size", &size, world.MIN_SIZE, world.MAX_SIZE, "%.0lfm", ImGuiSliderFlags_AlwaysClamp);
+    world.size = static_cast<double>(size);
+
     if (ImGui::Button("Start Simulation"))
     {
         world.start_sim();
@@ -107,7 +113,7 @@ void GUI::simulation_control()
     ImGui::SameLine();
     HelpMarker("Ticks per second, the number of simulation steps ran every second");
 
-    ImGui::SliderFloat("Delta time", &world.sim_delta, 1 / 60.0f, 1 / 15.0f);
+    ImGui::SliderFloat("Delta time", &world.sim_delta, 1 / 60.0f, 1 / 15.0f, "%f", ImGuiSliderFlags_AlwaysClamp);
     ImGui::SameLine();
     HelpMarker("The simulation delta time, may cause unstable behavior if raised");
 
