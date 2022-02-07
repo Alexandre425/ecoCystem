@@ -2,7 +2,7 @@
 
 #include <entt/entt.hpp>
 
-#include "vec2.hpp"
+#include "utilities.hpp"
 
 // An entity's position
 struct Position { Vec2 pos; };
@@ -12,14 +12,8 @@ struct Velocity { Vec2 vel; };
 struct Waypoint { Vec2 pos; };
 // An entity's target entity
 struct Target { entt::entity ent; };
-
-// An entity's color
-struct Color
-{
-    float r,g,b;
-
-    Color() = default;
-    Color(float r, float g, float b)
-        : r(r), g(g), b(b) {}
-};
+// An entity's size
+struct Size { float size; };
+// A creature's colors
+struct CreatureColor { Color color1, color2; };
 

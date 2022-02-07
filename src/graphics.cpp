@@ -5,9 +5,11 @@
 #include <glm/glm.hpp>
 #include <glm/gtx/matrix_transform_2d.hpp>
 #include <glm/gtc/type_ptr.hpp>
+#include <entt/entt.hpp>
 
 #include "graphics.hpp"
 #include "world.hpp"
+#include "components.hpp"
 
 extern World world;
 
@@ -115,6 +117,59 @@ Graphics::~Graphics()
     tri_shader.reset();
 
     glfwTerminate();
+}
+
+void Graphics::draw_creatures()
+{
+    auto &reg = world.registry;
+    auto group = reg.group<Position, Velocity, Size, CreatureColor>();
+
+    auto creature_count = group.size();
+
+    // TODO: static this?
+    std::vector<Color> color_vec1(creature_count), color_vec2(creature_count);
+    std::vector<glm::mat3> model_vec(creature_count);
+
+    // Store the data in the respective vectors
+    std::size_t count = 0;
+    group.each([&](auto ent, const Position &pos, const Velocity &vel, const Size &size, const CreatureColor &col)
+    {
+        // Generate the model matrix
+        glm::mat3 model;
+        model = glm::mat3(1.0);
+        model = glm::translate(model, glm::vec2(pos.pos.x, pos.pos.y));
+        model = glm::scale(model, glm::vec2(size.size));
+        //model = glm::rotate(model, ang);
+        // Push the data onto the vectors
+        model_vec[count]  = model;
+        color_vec1[count] = col.color1;
+        color_vec2[count] = col.color2;
+        count++;
+    });
+
+    // Transfer it
+    glBindBuffer(GL_ARRAY_BUFFER, model_VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(glm::mat3) * creature_count, model_vec.data(), GL_DYNAMIC_DRAW);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+    glBindBuffer(GL_ARRAY_BUFFER, color1_VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(Color) * creature_count, color_vec1.data(), GL_DYNAMIC_DRAW);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+    glBindBuffer(GL_ARRAY_BUFFER, color2_VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(Color) * creature_count, color_vec2.data(), GL_DYNAMIC_DRAW);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+    glm::mat3 view(1.0);
+    view = glm::scale(view, glm::vec2(camera.zoom) * glm::vec2(1 / camera.w, 1 / camera.h));
+    view = glm::translate(view, -glm::vec2(camera.x, camera.y));
+
+    tri_shader->bind();
+    auto view_loc = glGetUniformLocation(tri_shader->id, "view");
+    glUniformMatrix3fv(view_loc, 1, GL_FALSE, glm::value_ptr(view));
+
+    glBindVertexArray(arrow_VAO);
+    glDrawArraysInstanced(GL_TRIANGLE_FAN, 0, 4, creature_count);
 }
 
 void Graphics::draw_test(float delta)

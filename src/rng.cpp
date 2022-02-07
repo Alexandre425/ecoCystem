@@ -1,5 +1,3 @@
-#include <functional>
-
 #include "rng.hpp"
 
 uint64_t Noise::get_noise(uint64_t x)
@@ -47,7 +45,12 @@ uint64_t NoiseRNG::random()
     return state = Noise::get_noise(state);
 }
 
-inline double NoiseRNG::random_normalized()
+double NoiseRNG::random_normalized()
 {
-    return NoiseRNG::random() / static_cast<double>(UINT64_MAX);
+    return random() / static_cast<double>(UINT64_MAX);
+}
+
+double NoiseRNG::random_between(const double min, const double max)
+{
+    return random_normalized() * (max - min) + min;
 }

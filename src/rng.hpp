@@ -25,6 +25,8 @@ public:
     // Returns a random number
     uint64_t random();
     // Returns a random double between 0 and 1
-    inline double random_normalized();
+    double random_normalized();
+    // Returns a random double between the provided values
+    double random_between(const double min, const double max);
 };
 

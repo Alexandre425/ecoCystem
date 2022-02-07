@@ -48,6 +48,8 @@ class Graphics
         void update_cam();
         // Draw test
         void draw_test(float delta);
+        // Draws all creatures
+        void draw_creatures();
 
     private:
         unsigned int arrow_VBO;

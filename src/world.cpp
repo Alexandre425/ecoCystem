@@ -5,6 +5,7 @@
 #include <backends/imgui_impl_glfw.h>
 
 #include "world.hpp"
+#include "creature.hpp"
 
 
 extern World world;
@@ -69,6 +70,11 @@ World::~World()
 void World::start_sim()
 {
     started = true;
+
+    for (int i = 0; i < 1000; ++i)
+    {
+        Creature::create();
+    }
 }
 
 void World::render_loop()
@@ -121,7 +127,8 @@ void World::render_start_menu(float delta)
 
 void World::render_sim(float delta)
 {
-    graphics.draw_test(delta);
+    //graphics.draw_test(delta);
+    graphics.draw_creatures();
 }
 
 
