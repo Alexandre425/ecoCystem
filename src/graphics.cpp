@@ -139,7 +139,8 @@ void Graphics::draw_creatures()
         model = glm::mat3(1.0);
         model = glm::translate(model, glm::vec2(pos.pos.x, pos.pos.y));
         model = glm::scale(model, glm::vec2(size.size));
-        //model = glm::rotate(model, ang);
+        auto ang = glm::acos(vel.vel.x / vel.vel.length()) * glm::sign(vel.vel.y);
+        model = glm::rotate(model, float(ang));
         // Push the data onto the vectors
         model_vec[count]  = model;
         color_vec1[count] = col.color1;

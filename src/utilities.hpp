@@ -1,5 +1,7 @@
 #pragma once
 
+#include <glm/glm.hpp>
+
 /**
  * @brief Low pass filter compensating for delta time
  *
@@ -40,7 +42,10 @@ struct Vec2
     Vec2() = default;
     Vec2(double x, double y)
         : x(x), y(y) {}
-
+    double length() const
+    {
+        return glm::sqrt(x * x + y * y);
+    };
 };
 
 inline Vec2 operator+(const Vec2 &a, const Vec2 &b) {return {a.x + b.x, a.y + b.y};}

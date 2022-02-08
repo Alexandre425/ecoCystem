@@ -13,7 +13,7 @@ struct Camera
     float w, h;
     float x, y, target_x, target_y;
     float zoom, target_zoom;
-    const float min_zoom = 10;
+    const float min_zoom = 1;
     const float max_zoom = 1000;
 
     // Updates the camera's zoom, ran once per tick

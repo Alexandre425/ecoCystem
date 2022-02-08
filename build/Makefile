@@ -339,6 +339,33 @@ ecoCystem/fast:
 	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_widgets.cpp.s
 .PHONY : 3rd/imgui/imgui_widgets.cpp.s
 
+src/behaviors/wandering.o: src/behaviors/wandering.cpp.o
+
+.PHONY : src/behaviors/wandering.o
+
+# target to build an object file
+src/behaviors/wandering.cpp.o:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/behaviors/wandering.cpp.o
+.PHONY : src/behaviors/wandering.cpp.o
+
+src/behaviors/wandering.i: src/behaviors/wandering.cpp.i
+
+.PHONY : src/behaviors/wandering.i
+
+# target to preprocess a source file
+src/behaviors/wandering.cpp.i:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/behaviors/wandering.cpp.i
+.PHONY : src/behaviors/wandering.cpp.i
+
+src/behaviors/wandering.s: src/behaviors/wandering.cpp.s
+
+.PHONY : src/behaviors/wandering.s
+
+# target to generate assembly for a file
+src/behaviors/wandering.cpp.s:
+	$(MAKE) -f CMakeFiles/ecoCystem.dir/build.make CMakeFiles/ecoCystem.dir/src/behaviors/wandering.cpp.s
+.PHONY : src/behaviors/wandering.cpp.s
+
 src/components.o: src/components.cpp.o
 
 .PHONY : src/components.o
@@ -642,6 +669,9 @@ help:
 	@echo "... 3rd/imgui/imgui_widgets.o"
 	@echo "... 3rd/imgui/imgui_widgets.i"
 	@echo "... 3rd/imgui/imgui_widgets.s"
+	@echo "... src/behaviors/wandering.o"
+	@echo "... src/behaviors/wandering.i"
+	@echo "... src/behaviors/wandering.s"
 	@echo "... src/components.o"
 	@echo "... src/components.i"
 	@echo "... src/components.s"

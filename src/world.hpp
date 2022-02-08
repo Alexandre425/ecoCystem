@@ -19,11 +19,22 @@ class World
         // Random number generator
         NoiseRNG rng;
 
-
         static constexpr double MIN_SIZE = 20;
         static constexpr double MAX_SIZE = 10000;
         // World size in meters (always square)
         double size;
+
+        // Number of species to spawn at the start
+        uint32_t species_count = 20;
+        // Number of creatures per species to spawn at the start
+        uint32_t creatures_per_species = 20;
+
+        // Wether creature migrations are enabled
+        bool migrations_enabled = false;
+        // Number of seconds between migrations
+        float migration_time = 60.;
+        // Number of creatures per migration
+        uint32_t migration_count = 5;
 
         using timepoint = std::chrono::time_point<std::chrono::steady_clock>;
         // Start time of the simulation

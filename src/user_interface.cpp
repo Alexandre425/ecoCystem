@@ -75,9 +75,34 @@ void GUI::start_menu()
 
     ImGui::PushItemWidth(ImGui::GetFontSize() * 20);
 
+    ImGui::Text("CTRL+Left click to manually enter values");
+
+    // World size
     static float size = world.MAX_SIZE / 2.0f;
     ImGui::SliderFloat("World size", &size, world.MIN_SIZE, world.MAX_SIZE, "%.0lfm", ImGuiSliderFlags_AlwaysClamp);
     world.size = static_cast<double>(size);
+
+    // Species and creature count
+    ImGui::DragInt("Species Count", (int*)&world.species_count, 0.2, 0, 10000, nullptr, ImGuiSliderFlags_AlwaysClamp);
+    ImGui::SameLine();
+    HelpMarker("The number of different species to spawn at the start");
+
+    ImGui::DragInt("Creature Count", (int*)&world.creatures_per_species, 0.2, 0, 10000, nullptr, ImGuiSliderFlags_AlwaysClamp);
+    ImGui::SameLine();
+    HelpMarker("The number of creatures of each species to spawn at the start");
+
+    ImGui::Checkbox("Enable Migrations", &world.migrations_enabled);
+    ImGui::SameLine();
+    HelpMarker("Enables the periodic migration of random creatures to the edges of the world");
+
+    ImGui::BeginDisabled(!world.migrations_enabled);
+
+    ImGui::DragInt("Migration Size", (int*)&world.migration_count, 0.2, 0, 10000, nullptr, ImGuiSliderFlags_AlwaysClamp);
+    ImGui::SameLine();
+    HelpMarker("The number of creatures per migration");
+
+    ImGui::EndDisabled();
+
 
     if (ImGui::Button("Start Simulation"))
     {

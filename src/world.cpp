@@ -71,9 +71,15 @@ void World::start_sim()
 {
     started = true;
 
-    for (int i = 0; i < 1000; ++i)
+    for (int i = 0; i < world.species_count; ++i)
     {
-        Creature::create();
+        auto creature = Creature();
+        for (int j = 0; j < world.creatures_per_species; ++j)
+        {
+            creature.position.pos = Vec2(world.size * rng.random_between(-0.5, 0.5), world.size * rng.random_between(-0.5, 0.5));
+            creature.is_male = (j % 2 == 0);
+            creature.registry_insert();
+        }
     }
 }
 
@@ -127,8 +133,11 @@ void World::render_start_menu(float delta)
 
 void World::render_sim(float delta)
 {
-    //graphics.draw_test(delta);
+    registry_mutex.lock();
+
     graphics.draw_creatures();
+    
+    registry_mutex.unlock();
 }
 
 

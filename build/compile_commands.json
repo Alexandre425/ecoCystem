@@ -1,6 +1,11 @@
 [
 {
   "directory": "/home/alexandre/ecoCystem/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include -I/home/alexandre/ecoCystem/3rd/glm -I/home/alexandre/ecoCystem/3rd/imgui -I/home/alexandre/ecoCystem/3rd/json/include -I/home/alexandre/ecoCystem/3rd/entt/single_include  -g   -std=gnu++17 -o CMakeFiles/ecoCystem.dir/src/behaviors/wandering.cpp.o -c /home/alexandre/ecoCystem/src/behaviors/wandering.cpp",
+  "file": "/home/alexandre/ecoCystem/src/behaviors/wandering.cpp"
+},
+{
+  "directory": "/home/alexandre/ecoCystem/build",
   "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/alexandre/ecoCystem/src -I/home/alexandre/ecoCystem/3rd/glad/include -I/home/alexandre/ecoCystem/3rd/glm -I/home/alexandre/ecoCystem/3rd/imgui -I/home/alexandre/ecoCystem/3rd/json/include -I/home/alexandre/ecoCystem/3rd/entt/single_include  -g   -std=gnu++17 -o CMakeFiles/ecoCystem.dir/src/components.cpp.o -c /home/alexandre/ecoCystem/src/components.cpp",
   "file": "/home/alexandre/ecoCystem/src/components.cpp"
 },

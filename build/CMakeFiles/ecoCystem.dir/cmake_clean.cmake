@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_draw.cpp.o"
   "CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_tables.cpp.o"
   "CMakeFiles/ecoCystem.dir/3rd/imgui/imgui_widgets.cpp.o"
+  "CMakeFiles/ecoCystem.dir/src/behaviors/wandering.cpp.o"
   "CMakeFiles/ecoCystem.dir/src/components.cpp.o"
   "CMakeFiles/ecoCystem.dir/src/creature.cpp.o"
   "CMakeFiles/ecoCystem.dir/src/graphics.cpp.o"
