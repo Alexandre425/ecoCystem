@@ -1,8 +1,8 @@
 #pragma once
 
 #include <chrono>
-#include <entt/entt.hpp>
 #include <mutex>
+#include <entt/entt.hpp>
 
 #include "graphics.hpp"
 #include "rng.hpp"
@@ -22,6 +22,7 @@ class World
         static constexpr double MIN_SIZE = 20;
         static constexpr double MAX_SIZE = 10000;
         // World size in meters (always square)
+        // Keep in mind the actual size is twice this, as the coord space is (-size, size)
         double size;
 
         // Number of species to spawn at the start

@@ -7,7 +7,6 @@
 #include "world.hpp"
 #include "creature.hpp"
 
-
 extern World world;
 
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
@@ -136,7 +135,7 @@ void World::render_sim(float delta)
     registry_mutex.lock();
 
     graphics.draw_creatures();
-    
+
     registry_mutex.unlock();
 }
 

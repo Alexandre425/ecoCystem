@@ -4,12 +4,8 @@
 
 #include "components.hpp"
 
-class Creature
+struct Creature
 {
-private:
-    /* data */
-public:
-
     struct Traits
     {
 

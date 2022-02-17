@@ -9,7 +9,7 @@ Creature::Creature()
 {
     auto &rng = world.rng;
 
-    position.pos = Vec2(world.size * rng.random_between(-0.5, 0.5), world.size * rng.random_between(-0.5, 0.5));
+    position.pos = Vec2(world.size * rng.random_between(-1., 1.), world.size * rng.random_between(-1., 1.));
     velocity.vel = Vec2(rng.random_between(-1., 1.), rng.random_between(-1., 1.));
     size.size = rng.random_between(0.4, 2.);
     colors.color1 = Color(rng.random_normalized(), rng.random_normalized(), rng.random_normalized());

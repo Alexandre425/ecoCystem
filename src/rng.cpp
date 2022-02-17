@@ -40,6 +40,11 @@ uint64_t Noise::get_noise(uint64_t seed, uint64_t x, uint64_t y)
     return Noise::get_noise(seed, x + (BIG_PRIME * y));
 }
 
+
+NoiseRNG::NoiseRNG(uint64_t state)
+    : state(state)
+{}
+
 uint64_t NoiseRNG::random()
 {
     return state = Noise::get_noise(state);

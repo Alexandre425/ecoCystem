@@ -79,8 +79,8 @@ void GUI::start_menu()
 
     // World size
     static float size = world.MAX_SIZE / 2.0f;
-    ImGui::SliderFloat("World size", &size, world.MIN_SIZE, world.MAX_SIZE, "%.0lfm", ImGuiSliderFlags_AlwaysClamp);
-    world.size = static_cast<double>(size);
+    ImGui::SliderFloat("World size", &size, world.MIN_SIZE * 2.0f, world.MAX_SIZE * 2.0f, "%.0lfm", ImGuiSliderFlags_AlwaysClamp);
+    world.size = static_cast<double>(size / 2.0f);
 
     // Species and creature count
     ImGui::DragInt("Species Count", (int*)&world.species_count, 0.2, 0, 10000, nullptr, ImGuiSliderFlags_AlwaysClamp);

@@ -21,6 +21,18 @@ void resize_callback(GLFWwindow *window, int w, int h)
     cam.w = w; cam.h = h;
 }
 
+Camera::Camera()
+    : x(0), y(0), target_x(0), target_y(0), zoom(max_zoom), target_zoom(max_zoom), w(800), h(600)
+{}
+
+void Camera::update(const float delta)
+{
+    const float K = 10;
+    zoom = low_pass_filter(zoom, target_zoom, K, delta);
+    x = low_pass_filter(x, target_x, K, delta);
+    y = low_pass_filter(y, target_y, K, delta);
+}
+
 // Note that this is to be used with GL_TRIANGLE_FAN mode
 static float arrow[] = {
     0, -0.75,

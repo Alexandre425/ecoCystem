@@ -18,8 +18,7 @@ private:
     uint64_t state;
 public:
     // Initializes the random number generator with a state
-    NoiseRNG(uint64_t state)
-        : state(state) {}
+    NoiseRNG(uint64_t state);
     ~NoiseRNG() = default;
 
     // Returns a random number
