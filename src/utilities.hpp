@@ -46,9 +46,29 @@ struct Vec2
     {
         return glm::sqrt(x * x + y * y);
     };
+
+    double length2() const
+    {
+        return x * x + y * y;
+    };
+
+    void normalize()
+    {
+        double len = length();
+        x /= len;
+        y /= len;
+    }
+
+    Vec2 get_normalized()
+    {
+        Vec2 vec(*this);
+        vec.normalize();
+        return vec;
+    }
 };
 
 inline Vec2 operator+(const Vec2 &a, const Vec2 &b) {return {a.x + b.x, a.y + b.y};}
+inline Vec2 operator-(const Vec2 &a, const Vec2 &b) {return {a.x - b.x, a.y - b.y};}
 inline Vec2 operator*(const Vec2 &a, const Vec2 &b) {return {a.x * b.x, a.y * b.y};}
 inline Vec2 operator*(const Vec2 &a, const double k) {return {a.x * k , a.y * k};}
 inline Vec2 operator*(const double k, const Vec2 &a) {return {a.x * k , a.y * k};}

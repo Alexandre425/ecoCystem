@@ -1,2 +1,1 @@
-- Prototype movement system, make a bunch of creatures wander around
-- Create the creature renderer
+- Join the processing thread properly

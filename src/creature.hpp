@@ -20,6 +20,7 @@ struct Creature
 
     Position position;
     Velocity velocity;
+    Waypoint waypoint;
     Size size;
     CreatureColor colors;
     bool is_male;

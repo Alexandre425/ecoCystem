@@ -134,7 +134,9 @@ void GUI::simulation_control()
 
     ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
 
-    ImGui::SliderInt("TPS", &world.ticks_per_sec, 15, 1000);
+    static int TPS = 60;
+    ImGui::SliderInt("TPS", &TPS, 15, 1000);
+    world.sim_interval = 1. / static_cast<float>(TPS);
     ImGui::SameLine();
     HelpMarker("Ticks per second, the number of simulation steps ran every second");
 
@@ -144,7 +146,7 @@ void GUI::simulation_control()
 
     if (ImGui::Button("Reset"))
     {
-        world.ticks_per_sec = 60;
+        TPS = 60;
         world.sim_delta = 1 / 60.0f;
     }
 
@@ -153,9 +155,9 @@ void GUI::simulation_control()
     // TODO: Fix this once the simulation delta times are properly calculated
     static int effective_TPS = 0;
     effective_TPS = low_pass_filter(effective_TPS, static_cast<int>(1 / world.last_delta), 0.95);
-    float progress = static_cast<float>(effective_TPS) / static_cast<float>(world.ticks_per_sec);
+    float progress = static_cast<float>(effective_TPS) / static_cast<float>(TPS);
     char buf[16];
-    sprintf(buf, "%4d/%4d", effective_TPS, world.ticks_per_sec);
+    sprintf(buf, "%4d/%4d", effective_TPS, TPS);
     ImGui::ProgressBar(progress, ImVec2(0.0f, 0.0f), buf);
     ImGui::SameLine();
     ImGui::Text("TPS");

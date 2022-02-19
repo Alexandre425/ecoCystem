@@ -5,7 +5,7 @@ project(ecoCystem)
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_BUILD_TYPE DEBUG)
-set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "")
+set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-pthread")
 set(GLAD "3rd/glad/src/glad.c")
 
 file(GLOB_RECURSE SRC "src/*.cpp")

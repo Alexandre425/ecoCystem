@@ -1078,6 +1078,7 @@ CMakeFiles/ecoCystem.dir/src/systems/movement_system.cpp.o: ../3rd/glm/glm/vec4.
 CMakeFiles/ecoCystem.dir/src/systems/movement_system.cpp.o: ../3rd/glm/glm/vector_relational.hpp
 CMakeFiles/ecoCystem.dir/src/systems/movement_system.cpp.o: ../3rd/imgui/imconfig.h
 CMakeFiles/ecoCystem.dir/src/systems/movement_system.cpp.o: ../3rd/imgui/imgui.h
+CMakeFiles/ecoCystem.dir/src/systems/movement_system.cpp.o: ../src/components.hpp
 CMakeFiles/ecoCystem.dir/src/systems/movement_system.cpp.o: ../src/graphics.hpp
 CMakeFiles/ecoCystem.dir/src/systems/movement_system.cpp.o: ../src/rng.hpp
 CMakeFiles/ecoCystem.dir/src/systems/movement_system.cpp.o: ../src/shader.hpp

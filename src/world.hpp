@@ -24,6 +24,8 @@ class World
         // World size in meters (always square)
         // Keep in mind the actual size is twice this, as the coord space is (-size, size)
         double size;
+        // Returns a random position in the world
+        Vec2 random_position();
 
         // Number of species to spawn at the start
         uint32_t species_count = 20;
@@ -45,10 +47,10 @@ class World
         // Last sim delta
         float last_delta;
 
-        // Target simulation ticks per second
-        int ticks_per_sec = 60;
+        // Target simulation tick interval
+        float sim_interval = 1 / 60.;
         // Simulation delta time
-        float sim_delta = 1 / 60.0;
+        float sim_delta = 1 / 60.;
 
         // Wether the simulation has started;
         bool started = false;
@@ -76,9 +78,8 @@ class World
         // Renders the simulation
         void render_sim(float delta);
 
-
         // The simulation loop
-        void sim_loop();
+        static void sim_loop();
     private:
 
 };

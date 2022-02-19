@@ -66,25 +66,37 @@ World::~World()
         delete sys;
 }
 
+Vec2 World::random_position()
+{
+    return world.size * Vec2(rng.random_between(-1., 1.), rng.random_between(-1., 1.));
+}
+
+
 void World::start_sim()
 {
     started = true;
 
+    registry_mutex.lock();
     for (int i = 0; i < world.species_count; ++i)
     {
         auto creature = Creature();
         for (int j = 0; j < world.creatures_per_species; ++j)
         {
-            creature.position.pos = Vec2(world.size * rng.random_between(-0.5, 0.5), world.size * rng.random_between(-0.5, 0.5));
+            creature.position.pos = random_position();
+            creature.waypoint.pos = random_position();
             creature.is_male = (j % 2 == 0);
             creature.registry_insert();
         }
     }
+    registry_mutex.unlock();
 }
 
 void World::render_loop()
 {
     using clock = std::chrono::steady_clock;
+
+    // Launch the processing thread
+    std::thread proc_thread(sim_loop);
 
     const float target_delta = 1 / 60.0f;
     auto last_frame_time = clock::now();
@@ -142,13 +154,28 @@ void World::render_sim(float delta)
 
 void World::sim_loop()
 {
-    // Update all systems
-    for (const auto &sys : systems)
+    using clock = std::chrono::steady_clock;
+
+    auto last_tick = clock::now();
+    while (true)
     {
-        sys->update(sim_delta);
+        if (world.started)
+        {
+            auto now = clock::now();
+            world.last_delta = std::chrono::duration_cast<std::chrono::duration<float>>(now - last_tick).count();
+            std::this_thread::sleep_for(std::chrono::duration<float>(std::max(world.sim_interval - world.last_delta, (float)0.0)));
+            last_tick = clock::now();
+
+            world.registry_mutex.lock();
+            // Update all systems
+            for (const auto &sys : world.systems)
+            {
+                sys->update(world.sim_delta);
+            }
+
+            // Process events
+            world.registry_mutex.unlock();
+        }
     }
 
-    registry_mutex.lock();
-    // Process events
-    registry_mutex.unlock();
 }

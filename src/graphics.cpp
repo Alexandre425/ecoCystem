@@ -35,18 +35,10 @@ void Camera::update(const float delta)
 
 // Note that this is to be used with GL_TRIANGLE_FAN mode
 static float arrow[] = {
-    0, -0.75,
-    -1, -1,
-    0, 1,
-    1, -1
-};
-
-static int arrow_color_idx[] =
-{
-    0,
-    0,
-    1,
-    0
+    0, -.375,
+    -.5, -.5,
+    0, .5,
+    .5, -.5
 };
 
 Graphics::Graphics()
@@ -133,32 +125,31 @@ Graphics::~Graphics()
 
 void Graphics::draw_creatures()
 {
-    auto &reg = world.registry;
-    auto group = reg.group<Position, Velocity, Size, CreatureColor>();
+    std::size_t creature_count = 0;
+    std::vector<Color> color_vec1, color_vec2;
+    std::vector<glm::mat3> model_vec;
 
-    auto creature_count = group.size();
-
-    // TODO: static this?
-    std::vector<Color> color_vec1(creature_count), color_vec2(creature_count);
-    std::vector<glm::mat3> model_vec(creature_count);
-
-    // Store the data in the respective vectors
-    std::size_t count = 0;
-    group.each([&](auto ent, const Position &pos, const Velocity &vel, const Size &size, const CreatureColor &col)
     {
-        // Generate the model matrix
-        glm::mat3 model;
-        model = glm::mat3(1.0);
-        model = glm::translate(model, glm::vec2(pos.pos.x, pos.pos.y));
-        model = glm::scale(model, glm::vec2(size.size));
-        auto ang = glm::acos(vel.vel.x / vel.vel.length()) * glm::sign(vel.vel.y);
-        model = glm::rotate(model, float(ang));
-        // Push the data onto the vectors
-        model_vec[count]  = model;
-        color_vec1[count] = col.color1;
-        color_vec2[count] = col.color2;
-        count++;
-    });
+        auto &reg = world.registry;
+        auto view = reg.view<Position, Velocity, Size, CreatureColor>();
+        // Store the data in the respective vectors
+        view.each([&](auto ent, const Position &pos, const Velocity &vel, const Size &size, const CreatureColor &col)
+        {
+            // Generate the model matrix
+            glm::mat3 model;
+            model = glm::mat3(1.0);
+            model = glm::translate(model, glm::vec2(pos.pos.x, pos.pos.y));
+            model = glm::scale(model, glm::vec2(size.size));
+            auto ang = glm::acos(vel.vel.y / vel.vel.length()) * -glm::sign(vel.vel.x);
+            model = glm::rotate(model, float(ang));
+            // Push the data onto the vectors
+            model_vec.push_back(model);
+            color_vec1.push_back(col.color1);
+            color_vec2.push_back(col.color2);
+            creature_count++;
+        });
+    }
+
 
     // Transfer it
     glBindBuffer(GL_ARRAY_BUFFER, model_VBO);
