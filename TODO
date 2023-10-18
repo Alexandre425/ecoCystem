@@ -4,4 +4,8 @@ Random thoughts
  - Max plant height based off root size/thickness, trunk thickness, woodyness
  - Plants that are less edible grow slower (more woody, more resilient leaves)
  - Less edible plants require herbivores with an iron gut (which have less efficient digestion)
- 
+ - Latitute + noise based temperature
+ - Needle-like, less efficient leaves for cold resistant plants (e.g. pine trees)
+ - Temperature-based energy consumption for animals
+ - Fur trait to reduce endothermic energy requirement, should have significant disadvantages in hot areas, possibly lethal
+   - Internal temperature simulation? With behavior that seeks appropriate ambient temperature 
