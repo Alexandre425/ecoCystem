@@ -1,0 +1,23 @@
+- Join the processing thread properly
+
+Random thoughts
+- Grass growth rate influenced by soil fertility, max height influenced by temperature?
+- Max plant height based off root size/thickness, trunk thickness, woodyness
+- Plants that are less edible grow slower (more woody, more resilient leaves)
+- Less edible plants require herbivores with an iron gut (which have less efficient digestion)
+- Latitute + noise based temperature
+- Needle-like, less efficient leaves for cold resistant plants (e.g. pine trees)
+- Temperature-based energy consumption for animals
+- Fur trait to reduce endothermic energy requirement, should have significant disadvantages in hot areas, possibly lethal
+    - Internal temperature simulation? With behavior that seeks appropriate ambient temperature 
+- Stealth and perception
+    - Possibly temperature-aligned, creatures with good desert stealth have bad tundra stealth, etc.
+    - Grass height (grazing system) influences perception and stealth
+    - Tall creatures can look over tall grass, small creatures can hide in the grass
+    - Behavior to exploit tall grass stealth (ambush predation)
+        - If grass size > 0.5 * animal size, it can be used for active hiding (no movement)
+- (Hierarchichal?) State machine animal AI
+    - Traits influence weights and thresholds when transitioning from behaviors
+- Noise-based water depth and average precipitation
+    - Wider roots take advantage of precipitation better
+    - Deeper roots take advantage of deep water reserves
